@@ -665,7 +665,7 @@ function addContainTaiKhoan() {
                             <input name="pass" type="password" required autocomplete="off" />
                         </div> <!-- pass -->
 
-
+                        <p class="forgot"><a href="#">Quên mật khẩu?</a></p>
                         <button type="submit" class="button button-block" />Tiếp tục</button>
 
                     </form> <!-- /form -->

@@ -161,7 +161,7 @@ function changeInfo(iTag, info) {
             var users = getListUser();
             for (var u of users) {
                 if (u.username == inp.value && u.username != currentUser.username) {
-                    alert('Tên đã có người sử dụng !!');
+                    alert('Username đã có người sử dụng !!');
                     inp.value = currentUser.username;
                     return;
                 }
