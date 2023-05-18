@@ -288,6 +288,54 @@ function checkTaiKhoan() {
   }
 }
 
+function forgotPass(form) {
+  const email = form.email.value;
+  console.log(email);
+  // Lấy dữ liệu từ danh sách người dùng ở localstorage
+  const listUser = getListUser();
+  console.log(listUser);
+  for (const u of listUser) {
+    if (email === u.email) {
+      //Nếu tài khoản có property off bằng true thì thông báo bị khóa
+      if (u.off) {
+        alert("Tài khoản này đang bị khoá. Không thể đăng nhập.");
+        return true;
+      }
+      alert("Validated email successful !!!");
+      window.location.replace("changePass.html");
+      window.localStorage.setItem("CurrentEmail", JSON.stringify(email));
+      return false;
+    }
+  }
+  // Trả về thông báo nếu không khớp
+  alert("Nhập sai email !!!");
+  form.email.focus();
+  return false;
+}
+
+function passChange(form) {
+  const email = JSON.parse(window.localStorage.getItem("CurrentEmail")); // Lấy dữ liệu từ localstorage
+  const pass = form.pass.value;
+  console.log(email);
+  console.log(pass);
+  // Lấy dữ liệu từ danh sách người dùng ở localstorage
+  const listUser = getListUser();
+  for (let u of listUser) {
+    if (u.email === email) {
+      u.pass = pass;
+      // Đăng nhập vào tài khoản mới tạo
+      window.localStorage.setItem("CurrentUser", JSON.stringify(u));
+    }
+  }
+  // Lưu người mới vào localstorage
+  window.localStorage.setItem("ListUser", JSON.stringify(listUser));
+
+  // Trả về thông báo nếu không khớp
+  alert("Cập nhật mật khẩu thành công");
+  window.location.replace("index.html");
+  return false;
+}
+
 // Tạo event, hiệu ứng cho form tài khoản
 function setupEventTaiKhoan() {
   var taikhoan = document.getElementsByClassName("taikhoan")[0];
@@ -713,7 +761,8 @@ function addContainTaiKhoan() {
                             </label>
                             <input name="newPass" type="password" required autocomplete="off" />
                         </div> <!-- /pass -->
-
+			<p class="forgot"><a href="forgotPass.html">Quên mật khẩu?</a></p>
+			
                         <button type="submit" class="button button-block" />Tạo tài khoản</button>
 
                     </form> <!-- /form -->
