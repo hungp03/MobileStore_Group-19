@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Giới thiệu - Thế giới điện thoại</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Load font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
+        
+    <!-- our files -->
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/topnav.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/taikhoan.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/gioithieu.css">
+
+    <!-- js -->
+    <script src="data/products.js"></script>
+    <script src="js/dungchung.js"></script>
+    <script>
+        window.onload = function () {
+            khoiTaoForgot();
+        }
+    </script>
+    <style>
+        .tab-content-forgot>div{
+            display: none;
+        }
+        .tab-content-forgot>div.active{
+            display: block !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="containTaikhoan" style="transform: scale(1);">
+        <div class="taikhoan" style="background-color: #fff;">
+            <div class="tab-content-forgot">
+                <div id="forgotPass" class="active">
+                    <h1 style="color: #000;">Nhập mật khẩu mới</h1>
+
+                    <form onsubmit="return passChange(this);">
+                        <div class="field-wrap">
+                            <label style="color:#777">
+                                Mật khẩu mới<span class="req">*</span>
+                            </label>
+                            <input style="color: #000;" name="pass" type="password" required="" autocomplete="off">
+                        </div> <!-- /pass -->
+                        <button type="submit" class="button button-block">Đổi mật khẩu</button>
+
+                    </form> <!-- /form -->
+
+                </div>
+            </div><!-- tab-content -->
+
+        </div> <!-- /taikhoan -->
+    </div>
+    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+</body>
+
+</html>
