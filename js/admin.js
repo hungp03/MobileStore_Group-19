@@ -253,8 +253,8 @@ function layThongTinSanPhamTuTable(id) {
     var cpu = tr[15].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
     var ram = tr[16].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
     var rom = tr[17].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var microUSB = tr[18].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var battery = tr[19].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+   
+    var battery = tr[18].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
 
     if(isNaN(price)) {
         alert('Giá phải là số nguyên');
@@ -291,7 +291,6 @@ function layThongTinSanPhamTuTable(id) {
                 "cpu": cpu,
                 "ram": ram,
                 "rom": rom,
-                "microUSB": microUSB,
                 "battery": battery
             },
             "masp" : masp
@@ -418,7 +417,7 @@ function addKhungSuaSanPham(masp) {
             <td>
                 <select>`
                     
-    var company = ["Apple", "Samsung", "Oppo", "Nokia", "Huawei", "Xiaomi","Realme", "Vivo", "Philips", "Mobell", "Mobiistar", "Itel","Coolpad", "HTC", "Motorola"];
+    var company = ["Apple", "Samsung", "Oppo", "Nokia", "Asus", "Xiaomi","Realme", "Vivo", "Masstel", "Mobell", "Tecno", "Itel","Oneplus", "TCL", "ZTE"];
     for(var c of company) {
         if(sp.company == c)
             s += (`<option value="`+c+`" selected>`+c+`</option>`);
@@ -494,10 +493,6 @@ function addKhungSuaSanPham(masp) {
         <tr>
             <td>Bộ nhớ trong:</td>
             <td><input type="text" value="`+sp.detail.rom+`"></td>
-        </tr>
-        <tr>
-            <td>Thẻ nhớ:</td>
-            <td><input type="text" value="`+sp.detail.microUSB+`"></td>
         </tr>
         <tr>
             <td>Dung lượng Pin:</td>

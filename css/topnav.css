@@ -1,7 +1,7 @@
 /* Top Navigation */
 	.top-nav {
 		display: inline-block;
-		background: #f1f1f1;
+		background: #00483d;
 		width: 100%;
 		border-bottom: 1px #e1e1e1 solid;
 	}
@@ -19,16 +19,15 @@
 			height: 2em;
 			width: 2em;
 			line-height: 2em;
-			color: gray;
-			background-color: #f1f1f1;
+			color: white;
+			background-color: #00483d;
 			transition-duration: .2s;
 		}
+		
 		/* hightlight icon fb, google, youtube .... when hover */
 		.social-top-nav a:hover { color: #fff; }
-		.fa-facebook:hover { background: #3B5998; }
-		.fa-twitter:hover { background: #55ACEE; }
 		.fa-google:hover { background: #dd4b39; }
-		.fa-youtube:hover { background: #bb0000; }
+		.fa-github:hover { background: #090135; }
 	/* ======= End Social Icon ======= */
 
 	/* Quick link */
@@ -42,14 +41,14 @@
 		}
 		.top-nav-quicklink li a {
 			display: block;
-			color: gray;
-			padding: 8px 15px;
+			color: rgb(255, 255, 255);
+			padding: 8px 8px;
 			transition-duration: .15s;
 		}
 		.top-nav-quicklink li a:hover {
-			padding-top: 4px; 
-			border-bottom: 4px solid #000;
-			color: #000;
+			padding-top: 1px; 
+			border-bottom: 1px solid #f7d2d2;
+			color: #f7d2d2;
 		}
 		.top-nav-quicklink li a:hover i {
 			color: Dodgerblue;

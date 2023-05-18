@@ -44,7 +44,7 @@ function phanTich_URL_chiTietSanPham() {
     var divChiTiet = document.getElementsByClassName('chitietSanpham')[0];
 
     // Đổi title
-    document.title = nameProduct + ' - Thế giới điện thoại';
+    document.title = nameProduct + ' - BoostMoible';
 
     // Cập nhật tên h1
     var h1 = divChiTiet.getElementsByTagName('h1')[0];
@@ -87,7 +87,7 @@ function phanTich_URL_chiTietSanPham() {
     s += addThongSo('CPU', sanPhamHienTai.detail.cpu);
     s += addThongSo('RAM', sanPhamHienTai.detail.ram);
     s += addThongSo('Bộ nhớ trong', sanPhamHienTai.detail.rom); 
-    s += addThongSo('Dung lượng pin', sanPhamHienTai.detail.battery);
+    s += addThongSo('Pin, sạc', sanPhamHienTai.detail.battery);
     info.innerHTML = s;
 
     // Cập nhật hình

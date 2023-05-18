@@ -1,11 +1,11 @@
 /* Plc */
 .plc {
-	background: #dae2dc;
+	background: #00483d;
 	/* overflow: hidden; */
 	font-size: 15px;
 	color: #333;
-	border-top: 1px solid #bbb;
-	border-bottom: 1px solid #bbb;
+	border-top: none;
+	border-bottom: none;
 }
 
 .plc ul {
@@ -18,8 +18,9 @@
 	box-sizing: border-box;
 	padding: 5px 10px;
 	line-height: 20px;
-	border-right: solid 1px #bbb;
+	border-right: none;
 	margin: 5px 0;
+	color: antiquewhite
 }
 
 .plc li:last-child {
@@ -42,7 +43,7 @@
 	line-height: 40px;
 	font-size: 14px;
 	color: #ccc;
-	background-color: #252525;
+	background-color: #00483d;
 }
 
 .copy-right a {

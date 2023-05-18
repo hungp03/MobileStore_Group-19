@@ -313,9 +313,9 @@ function addKhungSanPham(tenKhung, color, filter, len, ele) {
     `">
 				<h3 class="tenKhung" style="` +
     gradient +
-    `">* ` +
+    `"> ` +
     tenKhung +
-    ` *</h3>
+    ` </h3>
 				<div class="listSpTrongKhung flexContain">`;
 
   // thêm các <li> (sản phẩm) vào tag

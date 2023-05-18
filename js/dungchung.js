@@ -549,16 +549,13 @@ function addTopNav() {
 	<div class="top-nav group">
         <section>
             <div class="social-top-nav">
-                <a class="fa fa-facebook"></a>
-                <a class="fa fa-twitter"></a>
+                <a class="fa fa-github" href="https://github.com/hungp03/BoostStore"></a>
                 <a class="fa fa-google"></a>
-                <a class="fa fa-youtube"></a>
             </div> <!-- End Social Topnav -->
 
             <ul class="top-nav-quicklink flexContain">
                 <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
                 <li><a href="gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
-                <li><a href="trungtambaohanh.html"><i class="fa fa-wrench"></i> Bảo hành</a></li>
                 <li><a href="lienhe.html"><i class="fa fa-phone"></i> Liên hệ</a></li>
             </ul> <!-- End Quick link -->
         </section><!-- End Section -->
@@ -571,7 +568,7 @@ function addHeader() {
 	<div class="header group">
         <div class="logo">
             <a href="index.html">
-                <img src="img/logo.jpg" alt="Trang chủ Smartphone Store" title="Trang chủ Smartphone Store">
+                <img src="img/logo.jpg" alt="Trang chủ BoostMobile Store" title="Trang chủ BoostMobile">
             </a>
         </div> <!-- End Logo -->
 
@@ -877,9 +874,7 @@ function getThongTinSanPhamFrom_TheGioiDiDong() {
 						case "Bộ nhớ trong:":
 							result.detail.rom = giatri;
 							break;
-						case "Thẻ nhớ:":
-							result.detail.microUSB = giatri;
-							break;
+						
 						case "Dung lượng pin:":
 							result.detail.battery = giatri;
 							break;

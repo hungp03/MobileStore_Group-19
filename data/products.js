@@ -558,7 +558,7 @@ let list_products = [
     rateCount: 0,
     promo:{
       name: "giamgia",
-      value: "16.990.000",
+      value: "1.790.000",
     },
     detail: {
       screen: "Amoled 6.7' Full HD+",
@@ -571,7 +571,7 @@ let list_products = [
       battery: "4500 mAh, sạc 80W",
     },
     star: 4,
-    img: "https://cdn.tgdd.vn/Products/Images/42/260546/oppo-reno8-pro-thumb-xanh-1-600x600.jpg",
+    img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/o/p/oppo_reno8_pro_1_.jpg",
     masp: "sp25",
   },
   {
