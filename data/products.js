@@ -20,7 +20,7 @@ let list_products = [
       rom: "128 GB",
       battery: "5000 mAh, sạc 15W",
     },
-    img: "https://m.media-amazon.com/images/I/61Xm8wvM+5L._AC_UF894,1000_QL80_.jpg",
+    img: "./img/products/TCL_S30.jpg",
     masp: "sp1",
   },
   {
@@ -43,7 +43,7 @@ let list_products = [
       battery: "5000 mAh, sạc 10W",
     },
     star: 4,
-    img: "https://cdn.tgdd.vn/Products/Images/42/290878/Realme-c30s-den-temp-600x600.jpg",
+    img: "./img/products/c30s.jpg",
     masp: "sp2",
   },
   {
@@ -66,7 +66,7 @@ let list_products = [
       battery: "5000 mAh, sạc 10W",
     },
     star: 4,
-    img: "https://cdn.tgdd.vn/Products/Images/42/285032/vivo-y02s-thumb-1-2-600x600.jpg",
+    img: "./img/products/y02s.jpg",
     masp: "sp3",
   },
   {

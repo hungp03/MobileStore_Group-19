@@ -327,7 +327,7 @@ function themSanPham() {
     alert('Thêm sản phẩm "' + newSp.name + '" thành công.');
     document.getElementById('khungThemSanPham').style.transform = 'scale(0)';
 }
-function autoMaSanPham(company) {
+/*function autoMaSanPham(company) {
     // hàm tự tạo mã cho sản phẩm mới
     if(!company) company = document.getElementsByName('chonCompany')[0].value;
     var index = 0;
@@ -337,7 +337,7 @@ function autoMaSanPham(company) {
         }
     }
     document.getElementById('maspThem').value = company.substring(0, 3) + index;
-}
+}*/
 
 // Xóa
 function xoaSanPham(masp, tensp) {
