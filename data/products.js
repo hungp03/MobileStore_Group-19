@@ -1,19 +1,14 @@
-let rate = [67, 140, 124, 2, 74, 118, 133, 59, 32, 14, 62, 137, 38, 32, 71, 60, 68, 128, 56, 88, 136, 147, 121, 26, 142, 32, 84, 16, 68, 117, 53, 116, 119, 33, 133, 136, 64, 120, 134, 64, 99, 14, 10, 11, 73, 18, 148, 116, 38, 56, 131, 71, 19, 65, 146, 101, 115, 23, 17, 24, 55, 32, 105, 54, 115, 45, 62, 87, 9, 68, 132, 74, 30, 43, 129, 63, 107, 12, 122, 146, 31, 58, 9, 59, 26, 98, 19, 20, 83, 33, 56, 141, 133, 102, 72, 7, 59, 77, 41, 53];
-let count = -1;
-function getRateCount(){
-  count++;
-  return rate[count];
-}
+
 let list_products = [
   {
     name: "TCL 30 SE",
     price: "2.540.000",
     company: "TCL",
     star: 4,
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "2.390.000",
     },
     detail: {
       screen: "IPS LCD 6.52' HD+",
@@ -32,10 +27,10 @@ let list_products = [
     name: "Realme C30s",
     price: "2.870.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "200.000",
     },
     detail: {
       screen: "IPS LCD 6.5' HD+",
@@ -55,10 +50,10 @@ let list_products = [
     name: "Vivo Y02s",
     price: "3.290.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "IPS LCD 6.51' HD+",
@@ -75,10 +70,10 @@ let list_products = [
     masp: "sp3",
   },
   {
-    name: "Xiaomi Redmi 12C;",
+    name: "Xiaomi Redmi 12C",
     price: "3.590.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -101,7 +96,7 @@ let list_products = [
     name: "OPPO A55",
     price: "3.690.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -124,7 +119,7 @@ let list_products = [
     name: "Vivo Y21s",
     price: "3.890.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -147,7 +142,7 @@ let list_products = [
     name: "Vivo Y16",
     price: "4.090.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -170,7 +165,7 @@ let list_products = [
     name: "Xiaomi Redmi Note 11",
     price: "4.390.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -193,7 +188,7 @@ let list_products = [
     name: "Samsung Galaxy A23",
     price: "4.690.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -216,10 +211,10 @@ let list_products = [
     name: "Vivo Y35",
     price: "6.090.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "5.790.000",
     },
     detail: {
       screen: "IPS LCD 6.58' Full HD+",
@@ -239,7 +234,7 @@ let list_products = [
     name: "Realme 10",
     price: "6.490.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -262,7 +257,7 @@ let list_products = [
     name: "OPPO Reno8 Z",
     price: "7.990.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -285,7 +280,7 @@ let list_products = [
     name: "Vivo V25E",
     price: "6.490.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -308,7 +303,7 @@ let list_products = [
     name: "Xiaomi 11T",
     price: "8.990.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -331,7 +326,7 @@ let list_products = [
     name: "Samsung Galaxy S20 FE",
     price: "8.690.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -353,7 +348,7 @@ let list_products = [
     name: "OPPO Reno8 5G",
     price: "12.490.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -376,7 +371,7 @@ let list_products = [
     name: "Vivo V25 5G",
     price: "8.190.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -399,7 +394,7 @@ let list_products = [
     name: "OPPO Reno8 T",
     price: "10.690.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -422,7 +417,7 @@ let list_products = [
     name: "Samsung Galaxy S21 FE 5G",
     price: "10.590.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -445,7 +440,7 @@ let list_products = [
     name: "Samsung Galaxy A73 5G",
     price: "9.190.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -468,7 +463,7 @@ let list_products = [
     name: "Xiaomi 12T 5G",
     price: "10.990.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -491,7 +486,7 @@ let list_products = [
     name: "OPPO Reno6 Pro",
     price: "13.990.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -514,10 +509,10 @@ let list_products = [
     name: "Realme GT Neo 5 SE 5G",
     price: "7.150.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "350.000",
     },
     detail: {
       screen: "Amoled 6.74' 1.5K",
@@ -537,7 +532,7 @@ let list_products = [
     name: "Samsung Galaxy S22+",
     price: "17.990.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -560,10 +555,10 @@ let list_products = [
     name: "OPPO Reno8 Pro",
     price: "17.790.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "16.990.000",
     },
     detail: {
       screen: "Amoled 6.7' Full HD+",
@@ -583,7 +578,7 @@ let list_products = [
     name: "Samsung Galaxy S23",
     price: "16.390.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -606,9 +601,9 @@ let list_products = [
     name: "Asus ROG Phone 7",
     price: "15.690.000",
     company: "Asus",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
+      name: "moiramat",
       value: 0,
     },
     detail: {
@@ -629,7 +624,7 @@ let list_products = [
     name: "Samsung Galaxy Z Flip4",
     price: "19.990.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -650,12 +645,12 @@ let list_products = [
   },
   {
     name: "Xiaomi 13",
-    price: "17.790.000",
+    price: "15.790.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "2.000.000",
     },
     detail: {
       screen: "Amoled 6.36' Full HD+",
@@ -672,10 +667,10 @@ let list_products = [
     masp: "sp29",
   },
   {
-    name: "Samsung Galaxy Z Fold 4",
+    name: "Samsung Galaxy Z Fold 4 1TB",
     price: "35.290.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -687,21 +682,21 @@ let list_products = [
       camaraFront: "10 & 4 MP",
       cpu: "Snapdragon 8+ gen 1",
       ram: "12 GB",
-      rom: "512 GB",
+      rom: "1 TB",
       battery: "4400 mAh, sạc 25W",
     },
     star: 4.5,
-    img: "https://cdn.tgdd.vn/Products/Images/42/285031/samsung-galaxy-z-fold-4-512gb-xanh-1.jpg",
+    img: "https://th.bing.com/th/id/R.573fc4dc23c6646a3627014bdd55fb2f?rik=iNQb%2fMvnZl0GeA&pid=ImgRaw&r=0",
     masp: "sp30",
   },
   {
     name: "Samsung Galaxy S23+",
     price: "21.990.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "1.000.000",
     },
     detail: {
       screen: "Amoled 6.1' Full HD+",
@@ -721,10 +716,10 @@ let list_products = [
     name: "OPPO Find X5 Pro",
     price: "24.990.000",
     company: "Oppo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "1.500.000",
     },
     detail: {
       screen: "Amoled 6.7' 2K+",
@@ -744,7 +739,7 @@ let list_products = [
     name: "Xiaomi 13 Lite",
     price: "9.890.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -760,14 +755,14 @@ let list_products = [
       battery: "4500 mAh, sạc 67W",
     },
     star: 4,
-    img: "https://cdn.tgdd.vn/Products/Images/42/302531/xiaomi-13-xanh-1.jpg",
+    img: "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-13-lite-2.jpg",
     masp: "sp33",
   },
   {
     name: "Samsung Galaxy S22 Ultra",
     price: "25.490.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -790,10 +785,10 @@ let list_products = [
     name: "Samsung Galaxy S23 Ultra",
     price: "26.990.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "2.500.000",
     },
     detail: {
       screen: "Amoled 6.8' 2K+",
@@ -813,7 +808,7 @@ let list_products = [
     name: "Xiaomi 13 Pro",
     price: "23.990.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -836,7 +831,7 @@ let list_products = [
     name: "Realme 10 Pro Plus",
     price: "5.590.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -856,13 +851,13 @@ let list_products = [
     masp: "sp37",
   },
   {
-    name: "Samsung Galaxy Z Fold3",
+    name: "Samsung Galaxy Z Fold 3",
     price: "29.990.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "27.990.000",
     },
     detail: {
       screen: "Amoled 7.6' & phụ 6.2' Full HD+",
@@ -882,10 +877,10 @@ let list_products = [
     name: "Redmi Note 12 Turbo",
     price: "7.390.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount:0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "6.990.000",
     },
     detail: {
       screen: "Amoled 6.67' Full HD+",
@@ -902,9 +897,9 @@ let list_products = [
   },
   {
     name: "Poco X5 Pro 5G",
-    price: "7.490.000",
+    price: "7.290.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -927,10 +922,10 @@ let list_products = [
     name: "Samsung Galaxy Z Fold4",
     price: "34.990.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "4.300.000",
     },
     detail: {
       screen: "Amoled 7.6' & phụ 6.2' Full HD+",
@@ -950,7 +945,7 @@ let list_products = [
     name: "Realme C35",
     price: "3.090.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -966,17 +961,17 @@ let list_products = [
       battery: "5000 mAh, sạc 18W",
     },
     star: 5,
-    img: "https://cdn.tgdd.vn/Products/Images/42/261888/realme-c35-1-1.jpg",
+    img: "https://fdn2.gsmarena.com/vv/pics/realme/realme-c35-1.jpg",
     masp: "sp42",
   },
   {
     name: "Masstel IZI 10 4G",
     price: "390.000",
     company: "Masstel",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 1.77'",
@@ -996,10 +991,10 @@ let list_products = [
     name: "Mobell M239",
     price: "390.000",
     company: "Mobell",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 1.77'",
@@ -1019,10 +1014,10 @@ let list_products = [
     name: "Masstel IZI 55 4G",
     price: "550.000",
     company: "Masstel",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1042,10 +1037,10 @@ let list_products = [
     name: "Itel it9010 4G",
     price: "580.000",
     company: "Itel",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 1.77'",
@@ -1065,10 +1060,10 @@ let list_products = [
     name: "Masstel IZI 26 4G",
     price: "600.000",
     company: "Masstell",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1088,10 +1083,10 @@ let list_products = [
     name: "Masstel FAMI 12 4G",
     price: "650.000",
     company: "Masstel",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value:"",
     },
     detail: {
       screen: "TFT LCD 1.77'",
@@ -1111,10 +1106,10 @@ let list_products = [
     name: "Masstel Lux 10 4G",
     price: "550.000",
     company: "Masstell",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1134,10 +1129,10 @@ let list_products = [
     name: "Mobell F209",
     price: "670.000",
     company: "Mobell",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2'",
@@ -1157,10 +1152,10 @@ let list_products = [
     name: "Itel it9210 4G",
     price: "680.000",
     company: "Itel",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1180,10 +1175,10 @@ let list_products = [
     name: "Mobell M539",
     price: "730.000",
     company: "Mobell",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2.8'",
@@ -1203,10 +1198,10 @@ let list_products = [
     name: "Masstel FAMI 60 4G",
     price: "750.000",
     company: "Masstel ",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2'",
@@ -1226,10 +1221,10 @@ let list_products = [
     name: "Nokia 105 4G",
     price: "790.000",
     company: "Nokia",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 1.8'",
@@ -1249,10 +1244,10 @@ let list_products = [
     name: "Masstel Lux 20 4G",
     price: "800.000",
     company: "Masstel ",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "650.000",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1272,10 +1267,10 @@ let list_products = [
     name: "Mobell Rock 4",
     price: "810.000",
     company: "Mobell",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1295,10 +1290,10 @@ let list_products = [
     name: "Nokia 110 4G",
     price: "840.000",
     company: "Nokia",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "100.000",
     },
     detail: {
       screen: "TFT LCD 1.8'",
@@ -1318,10 +1313,10 @@ let list_products = [
     name: "Nokia 215 4G",
     price: "990.000",
     company: "Nokia",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "890.000",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1341,7 +1336,7 @@ let list_products = [
     name: "Nokia 8210 4G",
     price: "1.590.000",
     company: "Nokia",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1364,10 +1359,10 @@ let list_products = [
     name: "Nokia 5710",
     price: "1.790.000",
     company: "Nokia",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "1.590.000",
     },
     detail: {
       screen: "TFT LCD 2.4'",
@@ -1387,7 +1382,7 @@ let list_products = [
     name: "iPhone SE 2020",
     price: "7.490.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1410,7 +1405,7 @@ let list_products = [
     name: "iPhone 11",
     price: "10.490.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1433,10 +1428,10 @@ let list_products = [
     name: "iPhone SE 2022",
     price: "9.990.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "9.190.000",
     },
     detail: {
       screen: "IPS LCD 4.7' Liquid Retina",
@@ -1456,7 +1451,7 @@ let list_products = [
     name: "iPhone 11 Pro",
     price: "13.990.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1479,7 +1474,7 @@ let list_products = [
     name: "iPhone 12",
     price: "15.990.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1502,7 +1497,7 @@ let list_products = [
     name: "iPhone 13",
     price: "17.090.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1525,7 +1520,7 @@ let list_products = [
     name: "iPhone 14",
     price: "19.490.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1548,7 +1543,7 @@ let list_products = [
     name: "iPhone 14 Plus",
     price: "24.090.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1571,7 +1566,7 @@ let list_products = [
     name: "iPhone 14 Pro",
     price: "26.990.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1594,7 +1589,7 @@ let list_products = [
     name: "iPhone 13 Pro",
     price: "24.590.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1617,7 +1612,7 @@ let list_products = [
     name: "iPhone 14 Pro Max",
     price: "29.490.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1638,12 +1633,12 @@ let list_products = [
   },
   {
     name: "Samsung Galaxy A54",
-    price: 10490,
+    price: "10.490.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "moiramat",
+      value: "",
     },
     detail: {
       screen: "Amoled 6.4' Full HD+",
@@ -1661,12 +1656,12 @@ let list_products = [
   },
   {
     name: "Samsung Galaxy A34",
-    price: 8490,
+    price: "8.490.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "500.000",
     },
     detail: {
       screen: "Amoled 6.6' Full HD+",
@@ -1686,7 +1681,7 @@ let list_products = [
     name: "Realme 9i",
     price: "3.640.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1709,10 +1704,10 @@ let list_products = [
     name: "Nokia C31",
     price: "2.090.000",
     company: "Nokia",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "1.890.000",
     },
     detail: {
       screen: "TFT LCD 6.7' HD+",
@@ -1732,10 +1727,10 @@ let list_products = [
     name: "Poco X4 GT",
     price: "7.590.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "7.090.000",
     },
     detail: {
       screen: "IPS LCD 6.6' Full HD+ 144Hz",
@@ -1755,10 +1750,10 @@ let list_products = [
     name: "Realme 9 Pro",
     price: "4.990.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "400.000",
     },
     detail: {
       screen: "IPS LCD 6.6' Full HD+",
@@ -1778,10 +1773,10 @@ let list_products = [
     name: "Realme c55",
     price: "4.790.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "4.390.000",
     },
     detail: {
       screen: "IPS LCD 6.72' Full HD+",
@@ -1801,10 +1796,10 @@ let list_products = [
     name: "Poco M5",
     price: "3.490.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "500.000",
     },
     detail: {
       screen: "IPS LCD 6.6' Full HD+",
@@ -1824,10 +1819,10 @@ let list_products = [
     name: "Oneplus 11",
     price: "19.990.000",
     company: "Oneplus",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "1.000.000",
     },
     detail: {
       screen: "Amoled 6.7' Full HD+",
@@ -1847,10 +1842,10 @@ let list_products = [
     name: "Iphone XR",
     price: "8.990.000",
     company: "Apple",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "8.490.000",
     },
     detail: {
       screen: "IPS LCD 6.1' Full HD+ Retina",
@@ -1870,10 +1865,10 @@ let list_products = [
     name: "Redmi 10A",
     price: "1.990.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "",
+      value: "",
     },
     detail: {
       screen: "IPS LCD 6.53' HD+",
@@ -1893,7 +1888,7 @@ let list_products = [
     name: "Samsung Galaxy A23 5G",
     price: "6.290.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1916,7 +1911,7 @@ let list_products = [
     name: "Nubia red magic 6R",
     price: "8.590.000",
     company: "ZTE",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1939,7 +1934,7 @@ let list_products = [
     name: "Tecno pova 3",
     price: "4.190.000",
     company: "Tecno",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1962,7 +1957,7 @@ let list_products = [
     name: "Tecno pova 2",
     price: "3.190.000",
     company: "Tecno",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -1985,7 +1980,7 @@ let list_products = [
     name: "Oneplus 8T 5G",
     price: "10.990.000",
     company: "Oneplus",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -2008,10 +2003,10 @@ let list_products = [
     name: "Samsung Galaxy A14 5G",
     price: "5.190.000",
     company: "Samsung",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "moiramat",
+      value: "",
     },
     detail: {
       screen: "IPS LCD 6.6' Full HD+",
@@ -2031,10 +2026,10 @@ let list_products = [
     name: "Redmi Note 12",
     price: "3.950.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "moiramat",
+      value: "",
     },
     detail: {
       screen: "Amoled 6.67' Full HD+",
@@ -2052,12 +2047,12 @@ let list_products = [
   },
   {
     name: "Redmi 10 5G",
-    price: "3.290.000",
+    price: "3.690.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "3.290.000",
     },
     detail: {
       screen: "IPS LCD 6.58' Full HD+",
@@ -2077,10 +2072,10 @@ let list_products = [
     name: "Realme Q5",
     price: "3.950.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "3.690.000",
     },
     detail: {
       screen: "IPS LCD 6.6' Full HD+",
@@ -2098,12 +2093,12 @@ let list_products = [
   },
   {
     name: "Realme Q5 Pro",
-    price: "5.490.000",
+    price: "5.890.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "5.490.000",
     },
     detail: {
       screen: "Amoled 6.62' Full HD+",
@@ -2121,9 +2116,9 @@ let list_products = [
   },
   {
     name: "Poco X5 5G",
-    price: "5.590.000",
+    price: "5.450.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -2146,10 +2141,10 @@ let list_products = [
     name: "Xiaomi CIVI 2 5G",
     price: "7.290.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giareonline",
+      value: "6.990.000",
     },
     detail: {
       screen: "Amoled 6.55' Full HD+",
@@ -2169,7 +2164,7 @@ let list_products = [
     name: "Oneplus ACE Pro",
     price: "9.990.000",
     company: "Oneplus",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -2190,12 +2185,12 @@ let list_products = [
   },
   {
     name: "Nubia Red Magic 8 Pro+ 5G",
-    price: "16.590.000",
+    price: "17.590.000",
     company: "ZTE",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "moiramat",
+      value: "",
     },
     detail: {
       screen: "Amoled 6.8' 1.5K+",
@@ -2215,7 +2210,7 @@ let list_products = [
     name: "Tecno Spark Go 2023",
     price: "1.890.000",
     company: "Tecno",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -2238,7 +2233,7 @@ let list_products = [
     name: "Vivo iQOO Z7i 5G",
     price: "3.290.000",
     company: "Vivo",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -2261,10 +2256,10 @@ let list_products = [
     name: "Realme GT Neo 5 240W",
     price: "10.450.000",
     company: "Realme",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
-      name: "tragop",
-      value: 0,
+      name: "giamgia",
+      value: "500.000",
     },
     detail: {
       screen: "Amoled 6.74' 1.5K+",
@@ -2284,7 +2279,7 @@ let list_products = [
     name: "Xiaomi Redmi K60 5G",
     price: "7.850.000",
     company: "Xiaomi",
-    rateCount: getRateCount(),
+    rateCount: 0,
     promo:{
       name: "tragop",
       value: 0,
@@ -2305,3 +2300,9 @@ let list_products = [
   },
 ];
 
+/*let rate = [67, 140, 124, 2, 74, 118, 133, 59, 32, 14, 62, 137, 38, 32, 71, 60, 68, 128, 56, 88, 136, 147, 121, 26, 142, 32, 84, 16, 68, 117, 53, 116, 119, 33, 133, 136, 64, 120, 134, 64, 99, 14, 10, 11, 73, 18, 148, 116, 38, 56, 131, 71, 19, 65, 146, 101, 115, 23, 17, 24, 55, 32, 105, 54, 115, 45, 62, 87, 9, 68, 132, 74, 30, 43, 129, 63, 107, 12, 122, 146, 31, 58, 9, 59, 26, 98, 19, 20, 83, 33, 56, 141, 133, 102, 72, 7, 59, 77, 41, 53];
+let count = -1;
+function getRateCount(){
+  count++;
+  return rate[count];
+}*/

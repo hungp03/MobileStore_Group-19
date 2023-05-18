@@ -2,11 +2,11 @@ window.onload = function () {
   khoiTao();
 
   // Thêm hình vào banner
-  addBanner("img/banners/banner0.gif", "img/banners/banner0.gif");
-  var numBanner = 9; // Số lượng hình banner
-  for (var i = 1; i <= numBanner; i++) {
+
+  var numBanner = 8; // Số lượng hình banner
+  for (var i = 0; i <= numBanner; i++) {
     var linkimg = "img/banners/banner" + i + ".png";
-    addBanner(linkimg, linkimg);
+    addBanner(linkimg);
   }
 
   // Khởi động thư viện hỗ trợ banner - chỉ chạy khi đã tạo hình trong banner
@@ -25,7 +25,7 @@ window.onload = function () {
   autocomplete(document.getElementById("search-box"), list_products);
 
   // thêm tags (từ khóa) vào khung tìm kiếm
-  var tags = ["Samsung", "iPhone", "Huawei", "Oppo", "Mobi"];
+  var tags = ["Samsung", "iPhone", "Xiaomi", "Oppo", "Realme"];
   for (var t of tags) addTags(t, "index.html?search=" + t);
 
   // Thêm danh sách hãng điện thoại
@@ -78,9 +78,9 @@ window.onload = function () {
     // Thêm các khung sản phẩm
     var div = document.getElementsByClassName("contain-khungSanPham")[0];
     addKhungSanPham(
-      "NỔI BẬT NHẤT",
+      "TẤT CẢ SẢN PHẨM",
       yellow_red,
-      ["star=3", "sort=rateCount-decrease"],
+      [ "sort=price-decrease"],
       soLuong,
       div
     );
@@ -106,7 +106,7 @@ window.onload = function () {
       div
     );
     addKhungSanPham(
-      "GIẢM GIÁ LỚN",
+      "KHUYẾN MÃI GIẢM GIÁ",
       yellow_red,
       ["promo=giamgia"],
       soLuong,
@@ -679,12 +679,10 @@ function filterProductsStar(num) {
 // ================= Hàm khác ==================
 
 // Thêm banner
-function addBanner(img, link) {
+function addBanner(img) {
   var newDiv =
     `<div class='item'>
-						<a target='_blank' href=` +
-    link +
-    `>
+		
 							<img src=` +
     img +
     `>
