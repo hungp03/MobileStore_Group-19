@@ -62,7 +62,7 @@
 		// Thêm sản phẩm vào trang
 		function addProduct(p, id) {
 			promo = new Promo(p.promo.name, p.promo.value); // class Promo
-			product = new Product(p.img, p.name, p.price, p.star, p.rateCount, promo); // Class product
+			product = new Product(p.img, p.name, p.price,/* p.star,*/ p.rateCount, promo); // Class product
 			addToWeb(product, id);
 		}
 		function getResult() {
@@ -70,7 +70,7 @@
 			var company = document.getElementById('company').value;
 			var img = document.getElementById('img').value;
 			var price = document.getElementById('price').value;
-			var star = document.getElementById('star').value || 0;
+		//	var star = document.getElementById('star').value || 0;
 			var rateCount = document.getElementById('rateCount').value || 0;
 			var promoName = document.getElementById('promoName').value;
 			var promoValue = document.getElementById('promoValue').value;
@@ -83,7 +83,7 @@ return {
 	"company": company,
 	"img": img,
 	"price": price,
-	"star": star,
+	//"star": star,
 	"rateCount": rateCount,
 	"promo": {
 		"name": promoName,
@@ -161,10 +161,10 @@ return {
 						<td>Giá tiền:</td>
 						<td><input id="price" type="text"></td>
 					</tr>
-					<tr>
+					<!-- <tr>
 						<td>Đánh giá (mấy sao):</td>
 						<td><input id="star" type="text"></td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td>Số lượt đánh giá:</td>
 						<td><input id="rateCount" type="text"></td>

@@ -89,7 +89,7 @@ let list_products = [
       battery: "5000 mAh, sạc 10W",
     },
     star: 2,
-    img: "https://cdn.tgdd.vn/Products/Images/42/303163/xiaomi-redmi-12c-blue-thumb-600x600.jpg",
+    img: "./img/products/12c.jpg",
     masp: "sp4",
   },
   {

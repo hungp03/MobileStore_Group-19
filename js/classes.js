@@ -70,7 +70,6 @@ function addToWeb(p, ele, returnString) {
 		}
 		rating += `<span>` + p.rateCount + ` đánh giá</span>`;
 	}
-
 	// Chuyển giá tiền sang dạng tag html
 	var price = `<strong>` + p.price + `&#8363;</strong>`;
 	if (p.promo && p.promo.name == "giareonline") {

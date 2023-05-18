@@ -78,30 +78,41 @@ window.onload = function () {
     // Thêm các khung sản phẩm
     var div = document.getElementsByClassName("contain-khungSanPham")[0];
     addKhungSanPham(
+      //Để hiển thị tất cả sản phẩm, trước hết hiển thị page 1, có thể thay thế filter page=1 bằng all
       "TẤT CẢ SẢN PHẨM",
       yellow_red,
-      [ "sort=price-decrease"],
+      ["page=1"],
       soLuong,
       div
     );
     addKhungSanPham(
       "SẢN PHẨM MỚI",
       blue,
-      ["promo=moiramat", "sort=rateCount-decrease"],
+      [
+        "promo=moiramat",
+        "sort=price",
+        //  , "sort=rateCount-decrease"
+      ],
       soLuong,
       div
     );
     addKhungSanPham(
       "TRẢ GÓP 0%",
       yellow_red,
-      ["promo=tragop", "sort=rateCount-decrease"],
+      [
+        "promo=tragop",
+        //, "sort=rateCount-decrease"
+      ],
       soLuong,
       div
     );
     addKhungSanPham(
       "GIÁ SỐC ONLINE",
       green,
-      ["promo=giareonline", "sort=rateCount-decrease"],
+      [
+        "promo=giareonline",
+        //, "sort=rateCount-decrease"
+      ],
       soLuong,
       div
     );
@@ -135,17 +146,19 @@ window.onload = function () {
   addPromotion("giareonline");
 
   // Thêm chọn số sao
-  addStarFilter(3);
+  /*addStarFilter(3);
   addStarFilter(4);
   addStarFilter(5);
-
+*/
   // Thêm chọn sắp xếp
   addSortFilter("ascending", "price", "Giá tăng dần");
   addSortFilter("decrease", "price", "Giá giảm dần");
-  addSortFilter("ascending", "star", "Sao tăng dần");
+  //chưa sử dụng được tính năng đánh giá
+  /*addSortFilter("ascending", "star", "Sao tăng dần");
   addSortFilter("decrease", "star", "Sao giảm dần");
   addSortFilter("ascending", "rateCount", "Đánh giá tăng dần");
   addSortFilter("decrease", "rateCount", "Đánh giá giảm dần");
+  */
   addSortFilter("ascending", "name", "Tên A-Z");
   addSortFilter("decrease", "name", "Tên Z-A");
 
@@ -162,7 +175,7 @@ var filtersFromUrl = {
   search: "",
   price: "",
   promo: "",
-  star: "",
+  //star: "",
   page: "",
   sort: {
     by: "",
@@ -211,11 +224,11 @@ function phanTich_URL(filters, saveFilter) {
         if (saveFilter) filtersFromUrl.company = dauBang[1];
         break;
 
-      case "star":
+      /* case "star":
         result = timKiemTheoSoLuongSao(result, dauBang[1]);
         if (saveFilter) filtersFromUrl.star = dauBang[1];
         break;
-
+      */
       case "promo":
         result = timKiemTheoKhuyenMai(result, dauBang[1]);
         if (saveFilter) filtersFromUrl.promo = dauBang[1];
@@ -238,14 +251,14 @@ function phanTich_URL(filters, saveFilter) {
               return giaA - giaB;
             });
             break;
-
+          /*
           case "star":
             if (saveFilter) filtersFromUrl.sort.by = "star";
             result.sort(function (a, b) {
               return a.star - b.star;
             });
             break;
-
+*/
           case "rateCount":
             if (saveFilter) filtersFromUrl.sort.by = "rateCount";
             result.sort(function (a, b) {
@@ -422,8 +435,8 @@ function timKiemTheoCongTySanXuat(list, tenCongTy, soluong) {
   }
   return result;
 }
-
-function timKiemTheoSoLuongSao(list, soLuongSaoToiThieu, soluong) {
+//Tính năng tìm theo sao chưa sử dụng
+/*function timKiemTheoSoLuongSao(list, soLuongSaoToiThieu, soluong) {
   var count,
     result = [];
   if (soluong < list.length) count = soluong;
@@ -439,7 +452,7 @@ function timKiemTheoSoLuongSao(list, soLuongSaoToiThieu, soluong) {
 
   return result;
 }
-
+*/
 function timKiemTheoGiaTien(list, giaMin, giaMax, soluong) {
   var count,
     result = [];
@@ -528,10 +541,10 @@ function addAllChoosedFilter() {
 
   if (filtersFromUrl.promo != "")
     addChoosedFilter("promo", promoToString(filtersFromUrl.promo));
-
+  /*
   if (filtersFromUrl.star != "")
     addChoosedFilter("star", starToString(filtersFromUrl.star));
-
+*/
   if (filtersFromUrl.sort.by != "") {
     var sortBy = sortToString(filtersFromUrl.sort.by);
     var kieuSapXep =
@@ -647,7 +660,8 @@ function filterProductsName(ele) {
   alertNotHaveProduct(coSanPham);
 }
 
-// lọc theo số lượng sao
+// lọc theo số lượng sao(chưa dùng)
+/*
 function getStarFromLi(li) {
   var a = li.getElementsByTagName("a")[0];
   var divRate = a.getElementsByClassName("ratingresult");
@@ -675,7 +689,7 @@ function filterProductsStar(num) {
   // Thông báo nếu không có sản phẩm
   alertNotHaveProduct(coSanPham);
 }
-
+*/
 // ================= Hàm khác ==================
 
 // Thêm banner
@@ -724,7 +738,7 @@ function addPromotion(name) {
 }
 
 // Thêm chọn số lượng sao
-function addStarFilter(value) {
+/*function addStarFilter(value) {
   var link = createLinkFilter("add", "star", value);
 
   var text = starToString(value);
@@ -732,7 +746,7 @@ function addStarFilter(value) {
   document
     .getElementsByClassName("starFilter")[0]
     .getElementsByClassName("dropdown-content")[0].innerHTML += star;
-}
+}*/
 
 // Thêm chọn sắp xếp theo giá
 function addSortFilter(type, nameFilter, text) {
@@ -769,17 +783,18 @@ function promoToString(name) {
 }
 
 // Chuyển số sao về dạng chuỗi tiếng việt
-function starToString(star) {
+/*function starToString(star) {
   return "Trên " + (star - 1) + " sao";
-}
+}*/
 
 // Chuyển các loại sắp xếp về dạng chuỗi tiếng việt
 function sortToString(sortBy) {
   switch (sortBy) {
     case "price":
       return "Giá ";
-    case "star":
+    /* case "star":
       return "Sao ";
+    */
     case "rateCount":
       return "Đánh giá ";
     case "name":
@@ -790,6 +805,7 @@ function sortToString(sortBy) {
 }
 
 // Hàm Test, chưa sử dụng
+/*
 function hideSanPhamKhongThuoc(list) {
   var allLi = getLiArray();
   for (var i = 0; i < allLi.length; i++) {
@@ -802,4 +818,4 @@ function hideSanPhamKhongThuoc(list) {
     }
     if (hide) hideLi(allLi[i]);
   }
-}
+}*/
