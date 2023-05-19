@@ -301,7 +301,7 @@ function forgotPass(form) {
         alert("Tài khoản này đang bị khoá. Không thể đăng nhập.");
         return true;
       }
-      alert("Validated email successful !!!");
+      alert("Xác thực email thành công!");
       window.location.replace("changePass.html");
       window.localStorage.setItem("CurrentEmail", JSON.stringify(email));
       return false;

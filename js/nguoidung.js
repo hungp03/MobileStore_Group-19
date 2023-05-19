@@ -96,6 +96,16 @@ function addInfoUser(user) {
             <td> <i class="fa fa-pencil" onclick="changeInfo(this, 'email')"></i> </td>
         </tr>
         <tr>
+            <td>Address: </td>
+            <td> <input type="text" value="` + user.address + `" readonly> </td>
+            <td> <i class="fa fa-pencil" onclick="changeInfo(this, 'address')"></i> </td>
+        </tr>
+        <tr>
+            <td>Phone: </td>
+            <td> <input type="text" value="` + user.phone + `" readonly> </td>
+            <td> <i class="fa fa-pencil" onclick="changeInfo(this, 'phone')"></i> </td>
+        </tr>
+        <tr>
             <td colspan="3" style="padding:5px; border-top: 2px solid #ccc;"></td>
         </tr>
         <tr>
@@ -150,13 +160,26 @@ function changePass() {
     addAlertBox('Thay đổi mật khẩu thành công.', '#5f5', '#000', 4000);
     openChangePass();
 }
-
+function checkPhone(phone) {
+    for(var i =0 ; i< phone.length ;i++)
+    {
+        if(phone.charAt(i)<"0" || phone.charAt(i)>"9")
+            return false;
+    }
+    return true;
+}
 function changeInfo(iTag, info) {
     var inp = iTag.parentElement.previousElementSibling.getElementsByTagName('input')[0];
 
     // Đang hiện
     if (!inp.readOnly && inp.value != '') {
-
+        if (info == 'phone'){
+            if(!checkPhone(inp.value)){
+                alert("Số điện thoại không hợp lệ!")
+                inp.value = currentUser.phone;
+                return;
+            }
+        }
         if (info == 'username') {
             var users = getListUser();
             for (var u of users) {

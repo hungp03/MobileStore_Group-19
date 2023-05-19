@@ -1,4 +1,4 @@
-function User(username, pass, ho, ten, email, products, donhang) {
+function User(username, pass, ho, ten, email, products, donhang, address, phone) {
 	this.ho = ho || '';
 	this.ten = ten || '';
 	this.email = email || '';
@@ -7,7 +7,10 @@ function User(username, pass, ho, ten, email, products, donhang) {
 	this.pass = pass;
 	this.products = products || [];
 	this.donhang = donhang || [];
-}
+
+  this.address = address || '';
+  this.phone = phone || '';
+ }
 
 function equalUser(u1, u2) {
 	return (u1.username == u2.username && u1.pass == u2.pass);
@@ -70,6 +73,7 @@ function addToWeb(p, ele, returnString) {
 		}
 		rating += `<span>` + p.rateCount + ` đánh giá</span>`;
 	}
+ 
 	// Chuyển giá tiền sang dạng tag html
 	var price = `<strong>` + p.price + `&#8363;</strong>`;
 	if (p.promo && p.promo.name == "giareonline") {

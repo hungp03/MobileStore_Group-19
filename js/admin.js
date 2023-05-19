@@ -743,6 +743,8 @@ function addTableKhachHang() {
             <td style="width: 20%">` + u.email + `</td>
             <td style="width: 20%">` + u.username + `</td>
             <td style="width: 10%">` + u.pass + `</td>
+            <td style="width: 20%">` + u.address + `</td>
+            <td style="width: 15%">` + u.phone + `</td>
             <td style="width: 10%">
                 <div class="tooltip">
                     <label class="switch">

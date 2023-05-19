@@ -6,7 +6,7 @@ window.onload = function () {
     for (var t of tags) addTags(t, "index.html?search=" + t);
 }
 
-function nguoidung() {
+/*function nguoidung() {
     //kiem tra ho ten
     var hoten = document.formlh.ht.value;
     //kiem tra so dien thoai
@@ -28,6 +28,7 @@ function nguoidung() {
     // document.formlh.reset(); // làm sạch
     return false; // thoát
 }
+*/
 
 function checkName(str) {
     var special = '~!@#$%^&*()_+=-`./*{}[]|\'<>?;"';
