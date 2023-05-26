@@ -75,6 +75,15 @@ function phanTich_URL_chiTietSanPham() {
 					        <span>` + sanPhamHienTai.price + `&#8363;</span>`;
     }
 
+    //Hiển thị số sản phẩm còn lại
+    let qty = divChiTiet.getElementsByClassName("qty")[0];
+    if (sanPhamHienTai.qty <= 0){
+        qty.innerHTML = "Sản phẩm tạm thời hết hàng";
+    }
+    else {
+        qty.innerHTML = `Còn lại ${sanPhamHienTai.qty} sản phẩm`
+    }
+
     // Cập nhật chi tiết khuyến mãi
     document.getElementById('detailPromo').innerHTML = getDetailPromo(sanPhamHienTai);
 
@@ -96,22 +105,6 @@ function phanTich_URL_chiTietSanPham() {
     hinh.src = sanPhamHienTai.img;
     document.getElementById('bigimg').src = sanPhamHienTai.img;
 
-    // Hình nhỏ
-    addSmallImg("img/products/huawei-mate-20-pro-green-600x600.jpg");
-    addSmallImg("img/chitietsanpham/oppo-f9-mau-do-1-org.jpg");
-    addSmallImg("img/chitietsanpham/oppo-f9-mau-do-2-org.jpg");
-    addSmallImg("img/chitietsanpham/oppo-f9-mau-do-3-org.jpg");
-    addSmallImg("img/products/huawei-mate-20-pro-green-600x600.jpg");
-    addSmallImg("img/chitietsanpham/oppo-f9-mau-do-3-org.jpg");
-    addSmallImg("img/products/huawei-mate-20-pro-green-600x600.jpg");
-
-    // Khởi động thư viện hỗ trợ banner - chỉ chạy sau khi tạo xong hình nhỏ
-   var owl = $('.owl-carousel');
-    owl.owlCarousel({
-        items: 5,
-        center: true,
-        smartSpeed: 450,
-    });
 }
 
 // Chi tiết khuyến mãi

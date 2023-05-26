@@ -1,14 +1,16 @@
 window.onload = function () {
   khoiTao();
 
-  // Thêm hình vào banner
-
-  var numBanner = 8; // Số lượng hình banner
-  for (var i = 0; i <= numBanner; i++) {
-    var linkimg = "img/banners/banner" + i + ".png";
-    addBanner(linkimg);
-  }
-
+  // Thêm banner
+  addBanner("img/banners/banner0.png", "?page=1");
+  addBanner("img/banners/banner1.png", "chitietsanpham.html?Poco-X5-5G");
+  addBanner("img/banners/banner2.png", "chitietsanpham.html?Samsung-Galaxy-Z-Fold-4");
+  addBanner("img/banners/banner3.png", "chitietsanpham.html?Samsung-Galaxy-S23-Ultra");
+  addBanner("img/banners/banner4.png", "chitietsanpham.html?Nubia-Red-Magic-8-Pro+-5G");
+  addBanner("img/banners/banner5.png", "chitietsanpham.html?Realme-Q5-Pro");
+  addBanner("img/banners/banner6.png", "chitietsanpham.html?Redmi-Note-12-Turbo");
+  addBanner("img/banners/banner7.png", "chitietsanpham.html?Xiaomi-13");
+  addBanner("img/banners/banner8.png", "chitietsanpham.html?Samsung-Galaxy-A34");
   // Khởi động thư viện hỗ trợ banner - chỉ chạy khi đã tạo hình trong banner
   var owl = $(".owl-carousel");
   owl.owlCarousel({
@@ -693,14 +695,12 @@ function filterProductsStar(num) {
 // ================= Hàm khác ==================
 
 // Thêm banner
-function addBanner(img) {
+function addBanner(img, link) {
   var newDiv =
     `<div class='item'>
-		
-							<img src=` +
-    img +
-    `>
-						</a>
+    <a href=` + link + `>
+      <img src=` + img + `>
+    </a>
 					</div>`;
   var banner = document.getElementsByClassName("owl-carousel")[0];
   banner.innerHTML += newDiv;

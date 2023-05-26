@@ -123,6 +123,7 @@ function themVaoGioHang(masp, tensp) {
     );
     return;
   }
+  
   var t = new Date();
   var daCoSanPham = false;
 
@@ -143,6 +144,7 @@ function themVaoGioHang(masp, tensp) {
       date: t,
     });
   }
+  
 
   animateCartNumber();
   addAlertBox("Đã thêm " + tensp + " vào giỏ.", "#17c671", "#fff", 3500);
@@ -602,7 +604,6 @@ function addTopNav() {
 
             <ul class="top-nav-quicklink flexContain">
                 <li><a href="index.html"><i class="fa fa-home"></i> Trang chủ</a></li>
-                <li><a href="gioithieu.html"><i class="fa fa-info-circle"></i> Giới thiệu</a></li>
                 <li><a href="lienhe.html"><i class="fa fa-phone"></i> Liên hệ</a></li>
             </ul> <!-- End Quick link -->
         </section><!-- End Section -->
@@ -615,7 +616,7 @@ function addHeader() {
 	<div class="header group">
         <div class="logo">
             <a href="index.html">
-                <img src="img/logo.jpg" alt="Trang chủ BoostMobile Store" title="Trang chủ BoostMobile">
+                <img src="img/logo.png" alt="Trang chủ BoostMobile Store" title="Trang chủ BoostMobile">
             </a>
         </div> <!-- End Logo -->
 

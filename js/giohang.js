@@ -166,6 +166,7 @@ function thanhToan() {
       )
         window.location.replace("nguoidung.html");
     } else {
+      
       currentuser.donhang.push({
         sp: currentuser.products,
         ngaymua: new Date(),

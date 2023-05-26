@@ -1,3 +1,10 @@
+let qty = [0, 50, 26, 44, 18, 0, 24, 15, 9, 38, 3, 32, 6, 37, 3, 19, 39, 12, 24, 35, 4, 39, 15, 13, 35, 27, 21, 37, 0, 25, 45, 46, 6, 23, 13, 2, 40, 37, 47, 44, 32, 35, 1, 45, 18, 5, 14, 26, 40, 1, 5, 19, 49, 39, 24, 8, 30, 10, 47, 13, 48, 36, 33, 18, 29, 15, 16, 38, 42, 18, 44, 5, 16, 43, 48, 13, 42, 50, 23, 33, 35, 2, 38, 47, 13, 3, 28, 21, 35, 20, 14, 14, 48, 3, 45, 43, 6, 22, 36, 18];
+
+let count = -1;
+function getQty(){
+  count++;
+  return qty[count];
+}
 
 let list_products = [
   {
@@ -20,7 +27,8 @@ let list_products = [
       rom: "128 GB",
       battery: "5000 mAh, sạc 15W",
     },
-    img: "./img/products/TCL_S30.jpg",
+    img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/4/_/4_167.jpg",
+    qty: getQty(),
     masp: "sp1",
   },
   {
@@ -44,6 +52,7 @@ let list_products = [
     },
     star: 4,
     img: "./img/products/c30s.jpg",
+    qty: getQty(),
     masp: "sp2",
   },
   {
@@ -67,6 +76,7 @@ let list_products = [
     },
     star: 4,
     img: "./img/products/y02s.jpg",
+    qty: getQty(),
     masp: "sp3",
   },
   {
@@ -90,6 +100,7 @@ let list_products = [
     },
     star: 2,
     img: "./img/products/12c.jpg",
+    qty: getQty(),
     masp: "sp4",
   },
   {
@@ -113,6 +124,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/249944/oppo-a55-4g-thumb-new-600x600.jpg",
+    qty: getQty(),
     masp: "sp5",
   },
   {
@@ -136,6 +148,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/251216/Xiaomi-11T-Blue-600x600.jpg",
+    qty: getQty(),
     masp: "sp6",
   },
   {
@@ -159,6 +172,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/285223/vivo-y16-vang-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp7",
   },
   {
@@ -182,6 +196,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/245261/Xiaomi-redmi-note-11-black-600x600.jpeg",
+    qty: getQty(),
     masp: "sp8",
   },
   {
@@ -205,6 +220,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/274359/samsung-galaxy-a23-den-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp9",
   },
   {
@@ -228,6 +244,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/286697/vivo-y35-thumb-den-600x600.jpg",
+    qty: getQty(),
     masp: "sp10",
   },
   {
@@ -251,6 +268,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/292672/realme-10-thumb-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp11",
   },
   {
@@ -274,6 +292,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/282901/oppo-reno8-z-5g-vang-thumb-2-600x600.jpg",
+    qty: getQty(),
     masp: "sp12",
   },
   {
@@ -297,6 +316,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/283828/vivo-v25e-vang-thumb-1-2-600x600.jpg",
+    qty: getQty(),
     masp: "sp13",
   },
   {
@@ -320,6 +340,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/251216/Xiaomi-11T-Blue-600x600.jpg",
+    qty: getQty(),
     masp: "sp14",
   },
   {
@@ -342,6 +363,7 @@ let list_products = [
       battery: "4500 mAh, sạc 25W",
     },
     img: "https://cdn.tgdd.vn/Products/Images/42/224859/samsung-galaxy-s20-fan-edition-xanh-la-thumbnew-600x600.jpeg",
+    qty: getQty(),
     masp: "sp16",
   },
   {
@@ -365,6 +387,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/301641/oppo-reno8t-den1-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp15",
   },
   {
@@ -388,6 +411,7 @@ let list_products = [
     },
     star: 4.3,
     img: "https://cdn.tgdd.vn/Products/Images/42/283148/vivo-v25-5g-vang-thumb-1-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp17",
   },
   {
@@ -411,6 +435,7 @@ let list_products = [
     },
     star: 3,
     img: "https://cdn.tgdd.vn/Products/Images/42/301642/oppo-reno8t-vang1-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp18",
   },
   {
@@ -434,6 +459,7 @@ let list_products = [
     },
     star: 3,
     img: "https://cdn.tgdd.vn/Products/Images/42/267211/Samsung-Galaxy-S21-FE-vang-1-2-600x600.jpg",
+    qty: getQty(),
     masp: "sp19",
   },
   {
@@ -457,6 +483,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/246195/samsung-galaxy-a73-5g-xanh-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp20",
   },
   {
@@ -480,6 +507,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/291623/xiaomi-12t-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp21",
   },
   {
@@ -503,6 +531,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/236187/oppo-reno6-pro-grey-600x600.jpg",
+    qty: getQty(),
     masp: "sp22",
   },
   {
@@ -526,6 +555,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/04/w300/realme-gt-neo-5-se-5g-xanh.jpg.webp",
+    qty: getQty(),
     masp: "sp23",
   },
   {
@@ -549,6 +579,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/242439/Galaxy-S22-Plus-White-600x600.jpg",
+    qty: getQty(),
     masp: "sp24",
   },
   {
@@ -572,6 +603,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/o/p/oppo_reno8_pro_1_.jpg",
+    qty: getQty(),
     masp: "sp25",
   },
   {
@@ -595,6 +627,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-600x600.jpg",
+    qty: getQty(),
     masp: "sp26",
   },
   {
@@ -618,6 +651,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/04/w300/asus-rog-phone-7-den.jpg.webp",
+    qty: getQty(),
     masp: "sp27",
   },
   {
@@ -641,6 +675,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/258047/samsung-galaxy-z-flip4-5g-128gb-thumb-tim-600x600.jpg",
+    qty: getQty(),
     masp: "sp28",
   },
   {
@@ -664,6 +699,7 @@ let list_products = [
     },
     star: 3,
     img: "https://cdn.tgdd.vn/Products/Images/42/267984/xiaomi-13-thumb-den-600x600.jpg",
+    qty: getQty(),
     masp: "sp29",
   },
   {
@@ -687,6 +723,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://th.bing.com/th/id/R.573fc4dc23c6646a3627014bdd55fb2f?rik=iNQb%2fMvnZl0GeA&pid=ImgRaw&r=0",
+    qty: getQty(),
     masp: "sp30",
   },
   {
@@ -710,6 +747,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/301795/samsung-galaxy-s23-2-600x600.jpg",
+    qty: getQty(),
     masp: "sp31",
   },
   {
@@ -733,6 +771,7 @@ let list_products = [
     },
     star: 3.7,
     img: "https://cdn.tgdd.vn/Products/Images/42/250622/oppo-find-x5-pro-den-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp32",
   },
   {
@@ -756,6 +795,7 @@ let list_products = [
     },
     star: 4,
     img: "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-13-lite-2.jpg",
+    qty: getQty(),
     masp: "sp33",
   },
   {
@@ -779,6 +819,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/271697/Galaxy-S22-Ultra-Green-600x600.jpg",
+    qty: getQty(),
     masp: "sp34",
   },
   {
@@ -802,6 +843,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/249948/samsung-galaxy-s23-ultra-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp35",
   },
   {
@@ -825,6 +867,7 @@ let list_products = [
     },
     star: 4.7,
     img: "https://cdn.tgdd.vn/Products/Images/42/282903/xiaomi-13-pro-den-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp36",
   },
   {
@@ -848,6 +891,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/12/w300/realme-10-pro-plus-anh-sao-1.jpg.webp",
+    qty: getQty(),
     masp: "sp37",
   },
   {
@@ -871,6 +915,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/226935/samsung-galaxy-z-fold-3-silver-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp38",
   },
   {
@@ -893,6 +938,7 @@ let list_products = [
       battery: "5000 mAh, sạc 67W",
     },
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/03/w300/xiaomi-redmi-note-12-turbo-edition-trang.jpg.webp",
+    qty: getQty(),
     masp: "sp39",
   },
   {
@@ -916,10 +962,11 @@ let list_products = [
     },
     star: 4,
     img: "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-poco-x5-pro-5g-1.jpg",
+    qty: getQty(),
     masp: "sp40",
   },
   {
-    name: "Samsung Galaxy Z Fold4",
+    name: "Samsung Galaxy Z Fold 4",
     price: "34.990.000",
     company: "Samsung",
     rateCount: 0,
@@ -939,6 +986,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/250625/samsung-galaxy-z-fold4-kem-256gb-600x600.jpg",
+    qty: getQty(),
     masp: "sp41",
   },
   {
@@ -962,6 +1010,7 @@ let list_products = [
     },
     star: 5,
     img: "https://fdn2.gsmarena.com/vv/pics/realme/realme-c35-1.jpg",
+    qty: getQty(),
     masp: "sp42",
   },
   {
@@ -985,6 +1034,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/265311/masstel-izi-10-4g-xanh-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp43",
   },
   {
@@ -1008,6 +1058,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/284122/mobell-m239-do-thumb-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp44",
   },
   {
@@ -1031,6 +1082,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/264120/masstel-izi-55-gold-600x600.jpg",
+    qty: getQty(),
     masp: "sp45",
   },
   {
@@ -1054,6 +1106,7 @@ let list_products = [
     },
     star: 3.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/279401/itel-it9010-thumb-1-2-600x600.jpg",
+    qty: getQty(),
     masp: "sp46",
   },
   {
@@ -1077,6 +1130,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/299610/masstel-izi-26-4g-thum-600x600.jpg",
+    qty: getQty(),
     masp: "sp47",
   },
   {
@@ -1100,6 +1154,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/274016/Masstel-FAMI-12-4G-vang-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp48",
   },
   {
@@ -1123,6 +1178,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/299611/masstel-lux-10-vang-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp49",
   },
   {
@@ -1146,6 +1202,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/299998/mobell-f209-den-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp50",
   },
   {
@@ -1169,6 +1226,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/260146/itel-it9210-black-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp51",
   },
   {
@@ -1192,6 +1250,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/288630/mobell-m539-do-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp52",
   },
   {
@@ -1215,6 +1274,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/264121/masstel-fami-60-thumb-600x600.jpeg",
+    qty: getQty(),
     masp: "sp53",
   },
   {
@@ -1238,6 +1298,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/240194/nokia-105-4g-blue-600x600.jpg",
+    qty: getQty(),
     masp: "sp54",
   },
   {
@@ -1261,6 +1322,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/285027/masstel-lux-20-xanh-thumb-600x600.jpeg",
+    qty: getQty(),
     masp: "sp55",
   },
   {
@@ -1284,6 +1346,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/288631/mobell-rock-4-xanh-duong-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp56",
   },
   {
@@ -1307,6 +1370,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/240196/nokia-110-4g-blue-600x600.jpg",
+    qty: getQty(),
     masp: "sp57",
   },
   {
@@ -1330,6 +1394,7 @@ let list_products = [
     },
     star: 3,
     img: "https://cdn.tgdd.vn/Products/Images/42/228366/nokia-215-xanh-ngoc-new-600x600-600x600.jpg",
+    qty: getQty(),
     masp: "sp58",
   },
   {
@@ -1353,6 +1418,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/286060/Nokia%208210-trang-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp59",
   },
   {
@@ -1376,6 +1442,7 @@ let list_products = [
     },
     star: 3.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/286133/nokia-5710-thumb-den-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp60",
   },
   {
@@ -1399,6 +1466,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/230410/iphone-se-2020-trang-600x600-200x200.jpg",
+    qty: getQty(),
     masp: "sp61",
   },
   {
@@ -1422,6 +1490,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/153856/iphone-11-trang-600x600.jpg",
+    qty: getQty(),
     masp: "sp62",
   },
   {
@@ -1445,6 +1514,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/274158/iphone-se-white-600x600.jpg",
+    qty: getQty(),
     masp: "sp63",
   },
   {
@@ -1468,6 +1538,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn2.cellphones.com.vn/x358,webp,q100/media/catalog/product/i/p/iphone-11-pro-space-select-2019_1_2_1_2.png",
+    qty: getQty(),
     masp: "sp64",
   },
   {
@@ -1491,6 +1562,7 @@ let list_products = [
     },
     star: 4,
     img: "https://cdn.tgdd.vn/Products/Images/42/228737/iphone-12-do-new-600x600-600x600.jpg",
+    qty: getQty(),
     masp: "sp65",
   },
   {
@@ -1514,6 +1586,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/250258/iphone-13-blue-1-600x600.jpg",
+    qty: getQty(),
     masp: "sp66",
   },
   {
@@ -1537,6 +1610,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/240259/iPhone-14-thumb-do-600x600.jpg",
+    qty: getQty(),
     masp: "sp67",
   },
   {
@@ -1560,6 +1634,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/245545/iPhone-14-plus-thumb-den-600x600.jpg",
+    qty: getQty(),
     masp: "sp68",
   },
   {
@@ -1583,6 +1658,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/247508/iphone-14-pro-tim-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp69",
   },
   {
@@ -1606,6 +1682,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/250726/iphone-13-pro-graphite-600x600.jpg",
+    qty: getQty(),
     masp: "sp70",
   },
   {
@@ -1629,6 +1706,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn.tgdd.vn/Products/Images/42/251192/iphone-14-pro-max-vang-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp71",
   },
   {
@@ -1652,6 +1730,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/m/sm-a546_galaxy_a54_5g_awesome_violet_front.png",
+    qty: getQty(),
     masp: "sp72",
   },
   {
@@ -1675,6 +1754,7 @@ let list_products = [
     },
     star: 4.3,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/s/m/sm-a346_galaxy_a34_5g_awesome_silver_front_2.png",
+    qty: getQty(),
     masp: "sp73",
   },
   {
@@ -1698,6 +1778,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.tgdd.vn/Products/Images/42/262649/Realme-9i-xanh-thumb-600x600.jpg",
+    qty: getQty(),
     masp: "sp74",
   },
   {
@@ -1721,6 +1802,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/1/_/1_250.jpg",
+    qty: getQty(),
     masp: "sp75",
   },
   {
@@ -1744,6 +1826,7 @@ let list_products = [
     },
     star: 4.8,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/m/pms_1655902420.18254534_1.png",
+    qty: getQty(),
     masp: "sp76",
   },
   {
@@ -1767,6 +1850,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/r/e/real_me_pro_002.jpg",
+    qty: getQty(),
     masp: "sp77",
   },
   {
@@ -1790,6 +1874,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/r/g/rgrgrtyt6.jpg",
+    qty: getQty(),
     masp: "sp78",
   },
   {
@@ -1813,6 +1898,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/f/v/fvssxa.jpg",
+    qty: getQty(),
     masp: "sp79",
   },
   {
@@ -1836,6 +1922,7 @@ let list_products = [
     },
     star: 4.7,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/o/n/oneplus_11_-_green_-_rgb.jpg",
+    qty: getQty(),
     masp: "sp80",
   },
   {
@@ -1859,6 +1946,7 @@ let list_products = [
     },
     star: 4.6,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/a/p/apple-iphone-xr-64-gb-chinh-hang-vn_3_.jpg",
+    qty: getQty(),
     masp: "sp81",
   },
   {
@@ -1882,6 +1970,7 @@ let list_products = [
     },
     star: 4.6,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/m/pms_1650393946.86423132.png",
+    qty: getQty(),
     masp: "sp82",
   },
   {
@@ -1905,6 +1994,7 @@ let list_products = [
     },
     star: 4.3,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/2/2/22_14.jpg",
+    qty: getQty(),
     masp: "sp83",
   },
   {
@@ -1928,6 +2018,7 @@ let list_products = [
     },
     star: 4.8,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/z/t/zte-nubia-red-magic-6r-.jpg",
+    qty: getQty(),
     masp: "sp84",
   },
   {
@@ -1951,6 +2042,7 @@ let list_products = [
     },
     star: 5,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/p/o/pova3--hei.png",
+    qty: getQty(),
     masp: "sp85",
   },
   {
@@ -1974,6 +2066,7 @@ let list_products = [
     },
     star: 4.1,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/t/e/tecno-pova-2-3.jpg",
+    qty: getQty(),
     masp: "sp86",
   },
   {
@@ -1997,6 +2090,7 @@ let list_products = [
     },
     star: 4.2,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/o/n/oneplus-8t-600x600-1-200x200.jpg",
+    qty: getQty(),
     masp: "sp87",
   },
   {
@@ -2020,6 +2114,7 @@ let list_products = [
     },
     star: 4.7,
     img: "https://cdn2.cellphones.com.vn/358x358,webp,q100/media/catalog/product/6/1/61c76810-d69e-4f77-bfc3-15e1a914a4bb.png",
+    qty: getQty(),
     masp: "sp88",
   },
   {
@@ -2043,6 +2138,7 @@ let list_products = [
     },
     star: 4,
     img:"https://www.xtmobile.vn/vnt_upload/product/04_2023/thumbs/600_Xiaomi_redmi_note_12_green_xtmobile.jpg",
+    qty: getQty(),
     masp: "sp89",
   },
   {
@@ -2066,6 +2162,7 @@ let list_products = [
     },
     star: 4.3,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/03/w250/xiaomi-redmi-10-5g-xanh.jpg.webp",
+    qty: getQty(),
     masp: "sp90",
   },
   {
@@ -2089,6 +2186,7 @@ let list_products = [
     },
     star: 4.7,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/04/w250/realme-q5-trang.jpg.webp",
+    qty: getQty(),
     masp: "sp91",
   },
   {
@@ -2112,6 +2210,7 @@ let list_products = [
     },
     star: 4.7,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/04/w300/realme-q5-pro-trang.png.webp",
+    qty: getQty(),
     masp: "sp92",
   },
   {
@@ -2135,6 +2234,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/02/w250/poco-x5-5g-den.jpg.webp",
+    qty: getQty(),
     masp: "sp93",
   },
   {
@@ -2158,6 +2258,7 @@ let list_products = [
     },
     star: 4.8,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/09/w250/xiaomi-civi-2-xanh-bac.png.webp",
+    qty: getQty(),
     masp: "sp94",
   },
   {
@@ -2181,6 +2282,7 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/08/w250/oneplus-ace-pro-den.jpg.webp",
+    qty: getQty(),
     masp: "sp95",
   },
   {
@@ -2204,6 +2306,7 @@ let list_products = [
     },
     star: 4.8,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/12/w300/nubia-red-magic-8-pro-plus-sac-165w-den-trong.jpg.webp",
+    qty: getQty(),
     masp: "sp96",
   },
   {
@@ -2227,6 +2330,7 @@ let list_products = [
     },
     star: 4.3,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/03/w250/tecno-spark-go-2023-pin-5000mah-xanh.jpg.webp",
+    qty: getQty(),
     masp: "sp97",
   },
   {
@@ -2250,6 +2354,7 @@ let list_products = [
     },
     star: 4.6,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/03/w250/vivo-iqoo-z7i-xanh.jpg.webp",
+    qty: getQty(),
     masp: "sp98",
   },
   {
@@ -2273,6 +2378,7 @@ let list_products = [
     },
     star: 4.7,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2023/02/w250/realme-gt-neo-5-5g-trang.jpg.webp",
+    qty: getQty(),
     masp: "sp99",
   },
   {
@@ -2296,13 +2402,8 @@ let list_products = [
     },
     star: 4.5,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/12/w250/xiaomi-redmi-k60-den.jpg.webp",
+    qty: getQty(),
     masp: "spxx",
   },
 ];
 
-/*let rate = [67, 140, 124, 2, 74, 118, 133, 59, 32, 14, 62, 137, 38, 32, 71, 60, 68, 128, 56, 88, 136, 147, 121, 26, 142, 32, 84, 16, 68, 117, 53, 116, 119, 33, 133, 136, 64, 120, 134, 64, 99, 14, 10, 11, 73, 18, 148, 116, 38, 56, 131, 71, 19, 65, 146, 101, 115, 23, 17, 24, 55, 32, 105, 54, 115, 45, 62, 87, 9, 68, 132, 74, 30, 43, 129, 63, 107, 12, 122, 146, 31, 58, 9, 59, 26, 98, 19, 20, 83, 33, 56, 141, 133, 102, 72, 7, 59, 77, 41, 53];
-let count = -1;
-function getRateCount(){
-  count++;
-  return rate[count];
-}*/

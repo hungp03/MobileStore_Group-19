@@ -193,15 +193,7 @@
     margin: 0 0 0 5px;
 }
 
-.ship {
-    background-color: #ecf7ed;
-    border-radius: 3px;
-    border: 1px solid #c4ddc8;
-    margin: 5px 10px 10px;
-    padding: 0 10px;
-    font-weight: bold;
-    line-height: 30px;
-}
+
 
 .ship img {
     width: 19px;
@@ -209,7 +201,11 @@
     margin: 4px 10px 0 0;
     float: left;
 }
-
+.qty{
+    padding: 0 10px 10px;
+    color: #e10c00;
+    font-weight: bold;
+}
 .ship div {
     border-left: 1px solid #c4ddc8;
     display: block;

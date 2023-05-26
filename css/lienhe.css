@@ -26,13 +26,10 @@
 iframe {
 	border: 1px solid gray;
 }
-.guithongtin {
-	width: 45%;
-	float: left;
-}
+
 .thongtinnhom{
 	width: 50%;
-	float: right;
+	display: inline-block;
 }
 table{	
 	margin-top: 10px;
