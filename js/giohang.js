@@ -88,7 +88,7 @@ function addProductToTable(user) {
 					<button onclick="giamSoLuong('` +
       masp +
       `')"><i class="fa fa-minus"></i></button>
-					<input size="1" onchange="capNhatSoLuongFromInput(this, '` +
+					<input size="1" class="changeNum" onchange="capNhatSoLuongFromInput(this, '` +
       masp +
       `')" value=` +
       soluongSp +
@@ -130,6 +130,7 @@ function addProductToTable(user) {
 
 function xoaSanPhamTrongGioHang(i) {
   if (window.confirm("Xác nhận hủy mua")) {
+    
     currentuser.products.splice(i, 1);
     capNhatMoiThu();
   }
@@ -194,30 +195,77 @@ function xoaHet() {
 }
 
 // Cập nhật số lượng lúc nhập số lượng vào input
-function capNhatSoLuongFromInput(inp, masp) {
-  var soLuongMoi = Number(inp.value);
-  if (!soLuongMoi || soLuongMoi <= 0) soLuongMoi = 1;
 
+function capNhatSoLuongFromInput(inp, masp) {
+  //Lấy giá trị hiện tại của số lượng
+  let val;
+  for (let i = 0; i< currentuser.products.length; i++){
+    if (currentuser.products[i].ma == masp){
+      val = currentuser.products[i].soluong;
+    }
+  }
+  console.log(val); 
+
+  let list = getListProducts();
+  //Tìm sản phẩm để cập nhật số lượng
+  let currentProduct = timKiemTheoMa(list, masp);
+  
+  var soLuongMoi = Number(inp.value);
+  //kiểm tra số lượng mới có phù hợp không
+  if (!soLuongMoi || soLuongMoi <= 0) soLuongMoi = 1;
+  //tính số lượng chênh lệch
+  let modified = soLuongMoi - val;
+  let productQty = currentProduct.qty - modified;
+  //Nếu trừ đi mà số lượng còn trong kho là âm thì thông báo không đủ hàng
+  if (productQty < 0){
+    alert("Số lượng sản phẩm không đủ, chỉ còn " + currentProduct.qty + "sản phẩm!");
+    return;
+  }
+  //Nếu đủ hàng thì trừ số lượng trong kho một lượng thay đổi (modified) tương ứng
+  else{
+    currentProduct.qty-=modified;
+  }
+  
   for (var p of currentuser.products) {
     if (p.ma == masp) {
       p.soluong = soLuongMoi;
     }
   }
-
+  //Lưu lại danh sách sản phẩm
+  setListProducts(list);
   capNhatMoiThu();
 }
 
 function tangSoLuong(masp) {
+  let list = getListProducts();
+  //Tìm sản phẩm để giảm số lượng
+  let currentProduct = timKiemTheoMa(list, masp);
+  //Nếu còn thì trừ bớt, còn bằng 0 thì không trừ nữa vì hiện trong admin là số âm
+  if(currentProduct.qty > 0)
+    currentProduct.qty--;
+
   for (var p of currentuser.products) {
     if (p.ma == masp) {
       p.soluong++;
     }
   }
-
+  //Lưu lại vào listProducts
+  setListProducts(list);
+  //Nếu hết hàng thì thông báo và không thêm sản phẩm nữa
+  if (currentProduct.qty ==0){
+    alert('Sản phẩm tạm thời hết hàng, vui lòng quay lại sau!');
+    return;
+  }
+  
   capNhatMoiThu();
 }
 
 function giamSoLuong(masp) {
+  let list = getListProducts();
+  //Tìm sản phẩm để tăng số lượng trở lại
+  let currentProduct = timKiemTheoMa(list, masp);
+  //với mỗi lần giảm số lượng trong giỏ hàng, tăng trong kho thêm 1
+  currentProduct.qty++;
   for (var p of currentuser.products) {
     if (p.ma == masp) {
       if (p.soluong > 1) {
@@ -227,7 +275,9 @@ function giamSoLuong(masp) {
       }
     }
   }
-
+  //Lưu lại trong local
+  setListProducts(list);
+  console.log(currentProduct.qty);
   capNhatMoiThu();
 }
 

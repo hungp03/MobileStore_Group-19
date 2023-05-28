@@ -130,9 +130,12 @@ function themVaoGioHang(masp, tensp) {
   var daCoSanPham = false;
   //Kiểm tra sản phẩm còn hàng hay không, nếu hết thì không cho thêm vào giỏ hàng
   let currentProduct = timKiemTheoMa(list_products, masp);
-  if (currentProduct.qty <= 0 ){
+  if (currentProduct.qty == 0 ){
     addAlertBox("Sản phẩm " + tensp + " đang tạm hết. Vui lòng quay lại sau!", "#17c671", "#fff", 3500);
     return;
+  }
+  if (currentProduct.qty > 0){
+    currentProduct.qty--;
   }
   for (var i = 0; i < user.products.length; i++) {
     // check trùng sản phẩm
@@ -151,15 +154,20 @@ function themVaoGioHang(masp, tensp) {
       date: t,
     });
   }
-
+  //Nếu sản phẩm còn hàng thì mỗi lần thêm trừ đi 1 trong kho
+  
+  
+  console.log(currentProduct.qty);
   animateCartNumber();
   addAlertBox("Đã thêm " + tensp + " vào giỏ.", "#17c671", "#fff", 3500);
   
   //Cập nhật số lượng sản phẩm
+  setListProducts(list_products);
 
   setCurrentUser(user); // cập nhật giỏ hàng cho user hiện tại
   updateListUser(user); // cập nhật list user
   capNhat_ThongTin_CurrentUser(); // cập nhật giỏ hàng
+  
 }
 
 // ============================== TÀI KHOẢN ============================

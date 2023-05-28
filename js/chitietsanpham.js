@@ -132,6 +132,20 @@ function getDetailPromo(sp) {
     }
 }
 
+//Dùng cho nút thêm vào giỏ
+function buyNow(){
+    if(!getCurrentUser()){
+        alert("Bạn cần đăng nhập để mua hàng");
+        showTaiKhoan(true);
+        return;
+    }
+    else{
+        themVaoGioHang(maProduct, nameProduct);
+        alert("Đã thêm " + nameProduct + " vào giỏ");
+        location.reload();
+    }
+    
+}
 function addThongSo(ten, giatri) {
     return `<li>
                 <p>` + ten + `</p>
