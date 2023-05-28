@@ -11,7 +11,7 @@
 
 	<!-- Load font awesome icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-	 crossorigin="anonymous">
+		crossorigin="anonymous">
 
 	<!-- our files -->
 	<!-- css -->
@@ -35,15 +35,20 @@
 	<section style="min-height: 85vh">
 		<script> addHeader(); </script>
 
-		<table class="listSanPham" > </table>
-		
+		<table class="listSanPham"> </table>
+
 	</section> <!-- End Section -->
 
 	<script>
 		addContainTaiKhoan();
 	</script>
 
-	<div class="footer"><script>addFooter();</script></div>
+	<div class="footer">
+		<script>
+			addPlc();
+			addFooter();
+		</script>
+	</div>
 
 	<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
 </body>

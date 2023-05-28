@@ -80,12 +80,14 @@
                             class="fa fa-sort"></i></th>
                     <th title="Sắp xếp" style="width: 10%" onclick="sortProductsTable('masp')">Mã <i
                             class="fa fa-sort"></i></th>
-                    <th title="Sắp xếp" style="width: 40%" onclick="sortProductsTable('ten')">Tên <i
+                    <th title="Sắp xếp" style="width: 30%" onclick="sortProductsTable('ten')">Tên <i
                             class="fa fa-sort"></i></th>
+
                     <th title="Sắp xếp" style="width: 15%" onclick="sortProductsTable('gia')">Giá <i
                             class="fa fa-sort"></i></th>
-                    <th title="Sắp xếp" style="width: 15%" onclick="sortProductsTable('khuyenmai')">Khuyến mãi <i
+                    <th title="Sắp xếp" style="width: 10%" onclick="sortProductsTable('sl')">SL <i
                             class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 15%">Khuyến mãi </th>
                     <th style="width: 15%">Hành động</th>
                 </tr>
             </table>
@@ -99,8 +101,7 @@
                     <option value="ten">Tìm theo tên</option>
                 </select>
                 <input type="text" placeholder="Tìm kiếm..." onkeyup="timKiemSanPham(this)">
-                <button
-                    onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'; autoMaSanPham()">
+                <button onclick="document.getElementById('khungThemSanPham').style.transform = 'scale(1)'">
                     <i class="fa fa-plus-square"></i>
                     Thêm sản phẩm
                 </button>
@@ -123,7 +124,7 @@
                     <tr>
                         <td>Hãng:</td>
                         <td>
-                            <select name="chonCompany" onchange="autoMaSanPham(this.value)">
+                            <select name="chonCompany" >
                                 <script>
                                     var company = ["Apple", "Asus", "Samsung", "Xiaomi", "Realme", "Vivo", "Itel", "Tecno", "Oppo", "ZTE", "Mobell", "Oneplus", "Nokia", "Masstel", "TCL"];
                                     for (var c of company) {
@@ -139,7 +140,7 @@
                             <img class="hinhDaiDien" id="anhDaiDienSanPhamThem" src="">
                             <input type="file" accept="image/*"
                                 onchange="capNhatAnhSanPham(this.files, 'anhDaiDienSanPhamThem')">
-                                <input type="url" name="" id="">
+                            <input type="url" name="" id="">
                         </td>
                     </tr>
                     <tr>
@@ -147,11 +148,7 @@
                         <td><input type="text"></td>
                     </tr>
                     <tr>
-                        <td>Số sao (số nguyên 0->5):</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>Đánh giá (số nguyên):</td>
+                        <td>Số lượng (số nguyên):</td>
                         <td><input type="text"></td>
                     </tr>
                     <tr>
@@ -278,10 +275,9 @@
                             class="fa fa-sort"></i></th>
                     <th title="Sắp xếp" style="width: 10%" onclick="sortKhachHangTable('matkhau')">Mật khẩu <i
                             class="fa fa-sort"></i></th>
-                            <th title="Sắp xếp" style="width: 20%" >Address <i
-                                class="fa fa-sort"></i></th>
-                                <th title="Sắp xếp" style="width: 15%" ">Phone <i
-                                    class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 20%">Address <i class="fa fa-sort"></i></th>
+                    <th title="Sắp xếp" style="width: 15%" ">Phone <i
+                                    class=" fa fa-sort"></i></th>
                     <th style="width: 10%">Hành động</th>
                 </tr>
             </table>
@@ -296,7 +292,7 @@
                     <option value="taikhoan">Tìm theo tài khoản</option>
                 </select>
                 <input type="text" placeholder="Tìm kiếm..." onkeyup="timKiemNguoiDung(this)">
-                <button onclick="openThemNguoiDung()"><i class="fa fa-plus-square"></i> Thêm người dùng</button>
+                <!-- <button onclick="openThemNguoiDung()"><i class="fa fa-plus-square"></i> Thêm người dùng</button> -->
             </div>
         </div> <!-- // khach hang -->
     </div> <!-- // main -->

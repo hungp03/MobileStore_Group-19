@@ -186,11 +186,12 @@ function addTableProducts() {
         s += `<tr>
             <td style="width: 5%">` + (i+1) + `</td>
             <td style="width: 10%">` + p.masp + `</td>
-            <td style="width: 40%">
+            <td style="width: 30%">
                 <a title="Xem chi tiết" target="_blank" href="chitietsanpham.html?` + p.name.split(' ').join('-') + `">` + p.name + `</a>
                 <img src="` + p.img + `"></img>
             </td>
             <td style="width: 15%">` + p.price + `</td>
+            <td stlye="width: 10%"> `+ p.qty +` </td>
             <td style="width: 15%">` + promoToStringValue(p.promo) + `</td>
             <td style="width: 15%">
                 <div class="tooltip">
@@ -236,32 +237,38 @@ function layThongTinSanPhamTuTable(id) {
     var khung = document.getElementById(id);
     var tr = khung.getElementsByTagName('tr');
 
-    var masp = tr[1].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var name = tr[2].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var company = tr[3].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value;
-    var img = tr[4].getElementsByTagName('td')[1].getElementsByTagName('img')[0].src;
-    var price = tr[5].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var star = tr[6].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var rateCount = tr[7].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var promoName = tr[8].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value;
-    var promoValue = tr[9].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let masp = tr[1].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let name = tr[2].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let company = tr[3].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value;
+    let img = tr[4].getElementsByTagName('td')[1].getElementsByTagName('img')[0].src;
+    let price = tr[5].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let qty = tr[6].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
 
-    var screen = tr[11].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var os = tr[12].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var camara = tr[13].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var camaraFront = tr[14].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var cpu = tr[15].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var ram = tr[16].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
-    var rom = tr[17].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    //let rateCount = tr[7].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let promoName = tr[7].getElementsByTagName('td')[1].getElementsByTagName('select')[0].value;
+    let promoValue = tr[8].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    
+    let screen = tr[10].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let os = tr[11].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let camara = tr[12].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let camaraFront = tr[13].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let cpu = tr[14].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let ram = tr[15].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let rom = tr[16].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
    
-    var battery = tr[18].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
+    let battery = tr[17].getElementsByTagName('td')[1].getElementsByTagName('input')[0].value;
 
     if(isNaN(price)) {
         alert('Giá phải là số nguyên');
         return false;
     }
 
-    if(isNaN(star)) {
+    if(isNaN(qty)){
+        alert("Số lượng là số nguyên");
+        return false;
+    }
+
+    /*if(isNaN(star)) {
         alert('Số sao phải là số nguyên');
         return false;
     }
@@ -269,7 +276,7 @@ function layThongTinSanPhamTuTable(id) {
     if(isNaN(rateCount)) {
         alert('Số đánh giá phải là số nguyên');
         return false;
-    }
+    }*/
 
     try {
         return {
@@ -277,9 +284,10 @@ function layThongTinSanPhamTuTable(id) {
             "company": company,
             "img": previewSrc,
             "price": numToString(Number.parseInt(price, 10)),
-            "star": Number.parseInt(star, 10),
-            "rateCount": Number.parseInt(rateCount, 10),
-            "promo": {
+           // "star": Number.parseInt(star, 10),
+           //"rateCount": Number.parseInt(rateCount, 10),
+           "qty": Number.parseInt(qty, 10),
+           "promo": {
                 "name": promoName,
                 "value": promoValue
             },
@@ -351,9 +359,10 @@ function xoaSanPham(masp, tensp) {
 
         // Lưu vào localstorage
         setListProducts(list_products);
-
+        
         // Vẽ lại table 
         addTableProducts();
+        alert("Đã xóa sản phẩm "+ tensp);
     }
 }
 
@@ -439,13 +448,10 @@ function addKhungSuaSanPham(masp) {
             <td>Giá tiền (số nguyên):</td>
             <td><input type="text" value="`+stringToNum(sp.price)+`"></td>
         </tr>
+        
         <tr>
-            <td>Số sao (số nguyên 0->5):</td>
-            <td><input type="text" value="`+sp.star+`"></td>
-        </tr>
-        <tr>
-            <td>Đánh giá (số nguyên):</td>
-            <td><input type="text" value="`+sp.rateCount+`"></td>
+            <td>Số lượng (số nguyên):</td>
+            <td><input type="text" value="`+sp.qty+`"></td>
         </tr>
         <tr>
             <td>Khuyến mãi:</td>
@@ -785,9 +791,9 @@ function timKiemNguoiDung(inp) {
     }
 }
 
-function openThemNguoiDung() {
-    window.alert('Not Available!');
-}
+// function openThemNguoiDung() {
+//     window.alert('Not Available!');
+// }
 
 // vô hiệu hóa người dùng (tạm dừng, không cho đăng nhập vào)
 function voHieuHoaNguoiDung(inp, taikhoan) {
@@ -845,7 +851,6 @@ function getValueOfTypeInTable_KhachHang(tr, loai) {
 }
 
 // ================== Sort ====================
-// https://github.com/HoangTran0410/First_html_css_js/blob/master/sketch.js
 var decrease = true; // Sắp xếp giảm dần
 
 // loại là tên cột, func là hàm giúp lấy giá trị từ cột loai

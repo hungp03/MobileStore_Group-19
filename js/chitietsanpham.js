@@ -174,7 +174,7 @@ function addKhungSanPham(list_sanpham, tenKhung, color, ele) {
 
 	// mở tag
 	var s = `<div class="khungSanPham" style="` + borderColor + `">
-				<h3 class="tenKhung" style="` + gradient + `">* ` + tenKhung + ` *</h3>
+				<h3 class="tenKhung" style="` + gradient + `"> ` + tenKhung + ` </h3>
 				<div class="listSpTrongKhung flexContain">`;
 
 	for (var i = 0; i < list_sanpham.length; i++) {

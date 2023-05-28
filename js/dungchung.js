@@ -67,6 +67,7 @@ function copyObject(o) {
   return JSON.parse(JSON.stringify(o));
 }
 
+
 // ============== ALert Box ===============
 // div có id alert được tạo trong hàm addFooter
 function addAlertBox(text, bgcolor, textcolor, time) {
@@ -108,6 +109,7 @@ function animateCartNumber() {
 
 function themVaoGioHang(masp, tensp) {
   var user = getCurrentUser();
+
   if (!user) {
     alert("Bạn cần đăng nhập để mua hàng !");
     showTaiKhoan(true);
@@ -126,7 +128,12 @@ function themVaoGioHang(masp, tensp) {
   
   var t = new Date();
   var daCoSanPham = false;
-
+  //Kiểm tra sản phẩm còn hàng hay không, nếu hết thì không cho thêm vào giỏ hàng
+  let currentProduct = timKiemTheoMa(list_products, masp);
+  if (currentProduct.qty <= 0 ){
+    addAlertBox("Sản phẩm " + tensp + " đang tạm hết. Vui lòng quay lại sau!", "#17c671", "#fff", 3500);
+    return;
+  }
   for (var i = 0; i < user.products.length; i++) {
     // check trùng sản phẩm
     if (user.products[i].ma == masp) {
@@ -144,10 +151,11 @@ function themVaoGioHang(masp, tensp) {
       date: t,
     });
   }
-  
 
   animateCartNumber();
   addAlertBox("Đã thêm " + tensp + " vào giỏ.", "#17c671", "#fff", 3500);
+  
+  //Cập nhật số lượng sản phẩm
 
   setCurrentUser(user); // cập nhật giỏ hàng cho user hiện tại
   updateListUser(user); // cập nhật list user
