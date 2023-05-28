@@ -549,7 +549,8 @@ function getValueOfTypeInTable_SanPham(tr, loai) {
         case 'masp' : return td[1].innerHTML.toLowerCase();
         case 'ten' : return td[2].innerHTML.toLowerCase();
         case 'gia' : return stringToNum(td[3].innerHTML);
-        case 'khuyenmai' : return td[4].innerHTML.toLowerCase();
+        case 'soluong' : return stringToNum(td[4].innerHTML);
+        case 'khuyenmai' : return td[5].innerHTML.toLowerCase();
     }
     return false;
 }
