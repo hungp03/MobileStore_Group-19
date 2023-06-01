@@ -11,7 +11,7 @@
     <!-- Load font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous">
-        
+
     <!-- our files -->
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
@@ -19,21 +19,19 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/taikhoan.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/gioithieu.css">
 
-    <!-- js -->
-    <script src="data/products.js"></script>
-    <script src="js/dungchung.js"></script>
+
     <script>
-        window.onload = function () {
-            khoiTaoForgot();
-        }
+        /* window.onload = function () {
+             khoiTao();
+         }*/
     </script>
     <style>
-        .tab-content-forgot>div{
+        .tab-content-forgot>div {
             display: none;
         }
-        .tab-content-forgot>div.active{
+
+        .tab-content-forgot>div.active {
             display: block !important;
         }
     </style>
@@ -50,7 +48,11 @@
                     <form onsubmit="return forgotPass(this);">
 
                         <div class="field-wrap">
-                            <input style="color: #000;" name="email" type="email" required="" autocomplete="off" placeholder="Địa chỉ email">
+                            <input style="color: #000;" name="email" type="email" required="" autocomplete="off"
+                                placeholder="Địa chỉ email">
+                            <label for="auth" class="auth" style="color: #000; left: 0;"></label>
+                            <input style="color: #000; margin-top: 35px;" name="auth" type="text" required=""
+                                autocomplete="off" placeholder="Mã xác thực">
                         </div> <!-- /email -->
 
                         <button type="submit" class="button button-block">Xác nhận</button>
@@ -77,5 +79,7 @@
     </div>
     <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
 </body>
+<script src="js/forgotpass.js"></script>
+<script src="js/dungchung.js"></script>
 
 </html>

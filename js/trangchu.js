@@ -87,6 +87,7 @@ window.onload = function () {
       soLuong,
       div
     );
+    
     addKhungSanPham(
       "SẢN PHẨM MỚI",
       blue,
@@ -94,6 +95,16 @@ window.onload = function () {
         "promo=moiramat",
         "sort=price",
         //  , "sort=rateCount-decrease"
+      ],
+      soLuong,
+      div
+    );
+    addKhungSanPham(
+      "iPhone GIÁ TỐT",
+      green,
+      [
+        "company=Apple",
+        "sort=price-increase"
       ],
       soLuong,
       div
