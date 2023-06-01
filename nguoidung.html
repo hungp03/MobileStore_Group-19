@@ -11,9 +11,9 @@
 
 	<!-- Load font awesome icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-     crossorigin="anonymous">
+		crossorigin="anonymous">
 
-     <script src="js/Jquery/Jquery.min.js"></script>
+	<script src="js/Jquery/Jquery.min.js"></script>
 
 	<!-- our files -->
 	<!-- css -->
@@ -21,14 +21,14 @@
 	<link rel="stylesheet" href="css/topnav.css">
 	<link rel="stylesheet" href="css/header.css">
 	<link rel="stylesheet" href="css/taikhoan.css">
-    <link rel="stylesheet" href="css/gioHang.css">
-    <link rel="stylesheet" href="css/nguoidung.css">
+	<link rel="stylesheet" href="css/gioHang.css">
+	<link rel="stylesheet" href="css/nguoidung.css">
 	<link rel="stylesheet" href="css/footer.css">
 	<!-- js -->
 	<script src="data/products.js"></script>
 	<script src="js/classes.js"></script>
-    <script src="js/dungchung.js"></script>
-    <script src="js/nguoidung.js"></script>
+	<script src="js/dungchung.js"></script>
+	<script src="js/nguoidung.js"></script>
 
 </head>
 
@@ -37,19 +37,24 @@
 
 	<section>
 		<script> addHeader(); </script>
-        
-        <div class="infoUser"> 
 
-        </div>
+		<div class="infoUser">
 
-        <div class="listDonHang"> </div>
+		</div>
+
+		<div class="listDonHang"> </div>
 	</section> <!-- End Section -->
 
 	<script>
-		addContainTaiKhoan(); addPlc();
+		addContainTaiKhoan(); 
 	</script>
 
-	<div class="footer"><script>addFooter();</script></div>
+	<div class="footer">
+		<script>
+			addPlc();
+			addFooter();
+		</script>
+	</div>
 
 	<i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
 </body>

@@ -515,11 +515,6 @@ function addKhungSuaSanPham(masp) {
 
 // Cập nhật ảnh sản phẩm
 function capNhatAnhSanPham(files, id) {
-    // var url = '';
-    // if(files.length) url = window.URL.createObjectURL(files[0]);
-    
-    // document.getElementById(id).src = url;
-
     const reader = new FileReader();
     reader.addEventListener("load", function () {
         // convert image file to base64 string

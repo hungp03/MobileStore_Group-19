@@ -129,9 +129,13 @@ function addProductToTable(user) {
 }
 
 function xoaSanPhamTrongGioHang(i) {
+  let list = getListProducts();
   if (window.confirm("Xác nhận hủy mua")) {
-    
+    let sl = currentuser.products[i].soluong;
+    let currentProduct = timKiemTheoMa(list, currentuser.products[i].ma);
+    currentProduct.qty += sl;
     currentuser.products.splice(i, 1);
+    setListProducts(list);
     capNhatMoiThu();
   }
 }
@@ -167,7 +171,6 @@ function thanhToan() {
       )
         window.location.replace("nguoidung.html");
     } else {
-      
       currentuser.donhang.push({
         sp: currentuser.products,
         ngaymua: new Date(),
@@ -186,9 +189,16 @@ function thanhToan() {
 }
 
 function xoaHet() {
+  let list = getListProducts();
   if (currentuser.products.length) {
     if (window.confirm("Bạn có chắc chắn muốn xóa hết sản phẩm trong giỏ !!")) {
-      currentuser.products = [];
+      for (let i = 0; i < currentuser.products.length; i++) {
+        let sl = currentuser.products[i].soluong;
+        let currentProduct = timKiemTheoMa(list, currentuser.products[i].ma);
+        currentProduct.qty += sl;
+      }
+      currentuser.products =[];
+      setListProducts(list);
       capNhatMoiThu();
     }
   }
@@ -199,17 +209,17 @@ function xoaHet() {
 function capNhatSoLuongFromInput(inp, masp) {
   //Lấy giá trị hiện tại của số lượng
   let val;
-  for (let i = 0; i< currentuser.products.length; i++){
-    if (currentuser.products[i].ma == masp){
+  for (let i = 0; i < currentuser.products.length; i++) {
+    if (currentuser.products[i].ma == masp) {
       val = currentuser.products[i].soluong;
     }
   }
-  console.log(val); 
+  console.log(val);
 
   let list = getListProducts();
   //Tìm sản phẩm để cập nhật số lượng
   let currentProduct = timKiemTheoMa(list, masp);
-  
+
   var soLuongMoi = Number(inp.value);
   //kiểm tra số lượng mới có phù hợp không
   if (!soLuongMoi || soLuongMoi <= 0) soLuongMoi = 1;
@@ -217,15 +227,17 @@ function capNhatSoLuongFromInput(inp, masp) {
   let modified = soLuongMoi - val;
   let productQty = currentProduct.qty - modified;
   //Nếu trừ đi mà số lượng còn trong kho là âm thì thông báo không đủ hàng
-  if (productQty < 0){
-    alert("Số lượng sản phẩm không đủ, chỉ còn " + currentProduct.qty + "sản phẩm!");
+  if (productQty < 0) {
+    alert(
+      "Số lượng sản phẩm không đủ, chỉ còn " + currentProduct.qty + "sản phẩm!"
+    );
     return;
   }
   //Nếu đủ hàng thì trừ số lượng trong kho một lượng thay đổi (modified) tương ứng
-  else{
-    currentProduct.qty-=modified;
+  else {
+    currentProduct.qty -= modified;
   }
-  
+
   for (var p of currentuser.products) {
     if (p.ma == masp) {
       p.soluong = soLuongMoi;
@@ -241,8 +253,7 @@ function tangSoLuong(masp) {
   //Tìm sản phẩm để giảm số lượng
   let currentProduct = timKiemTheoMa(list, masp);
   //Nếu còn thì trừ bớt, còn bằng 0 thì không trừ nữa vì hiện trong admin là số âm
-  if(currentProduct.qty > 0)
-    currentProduct.qty--;
+  if (currentProduct.qty > 0) currentProduct.qty--;
 
   for (var p of currentuser.products) {
     if (p.ma == masp) {
@@ -252,11 +263,11 @@ function tangSoLuong(masp) {
   //Lưu lại vào listProducts
   setListProducts(list);
   //Nếu hết hàng thì thông báo và không thêm sản phẩm nữa
-  if (currentProduct.qty ==0){
-    alert('Sản phẩm tạm thời hết hàng, vui lòng quay lại sau!');
+  if (currentProduct.qty == 0) {
+    alert("Sản phẩm tạm thời hết hàng, vui lòng quay lại sau!");
     return;
   }
-  
+
   capNhatMoiThu();
 }
 
