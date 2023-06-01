@@ -252,7 +252,15 @@ function signUp(form) {
   var ten = form.ten.value;
   var email = form.email.value;
   var username = form.newUser.value;
+  if (username.length < 4){
+    alert("Tên đăng nhập quá ngắn, cần dài hơn 4 ký tự")
+    return false;
+  }
   var pass = form.newPass.value;
+  if (pass.length < 4){
+    alert("Mật khẩu cần dài hơn 4 chữ số");
+    return false;
+  }
   var newUser = new User(username, pass, ho, ten, email);
 
   // Lấy dữ liệu các khách hàng hiện có
@@ -665,7 +673,7 @@ function addContainTaiKhoan() {
 
             <div class="tab-content">
                 <div id="login">
-                    <h1>Chào mừng bạn trở lại!</h1>
+                    <h1>Đăng nhập</h1>
 
                     <form onsubmit="return logIn(this);">
 
@@ -690,7 +698,7 @@ function addContainTaiKhoan() {
 
                 </div> <!-- /log in -->
 
-                <div id="signup">
+                <div id="signup"">
                     <h1>Đăng kí miễn phí</h1>
 
                     <form onsubmit="return signUp(this);">

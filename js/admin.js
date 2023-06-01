@@ -57,7 +57,7 @@ function createChartConfig(
         },
         options: {
             title: {
-                fontColor: '#fff',
+                fontColor: '#000',
                 fontSize: 25,
                 display: true,
                 text: title

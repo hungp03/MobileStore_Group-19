@@ -34,10 +34,10 @@
 }
 
 .taikhoan {
-  background: rgba(19, 35, 47, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 40px;
   max-width: 600px;
-  margin: 30px auto;
+  margin: 60px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   font-family: Arial, Helvetica, sans-serif;
@@ -78,7 +78,7 @@
   display: block;
   padding: 15px;
   background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
+  color: #5c5c5c;
   font-size: 20px;
   float: left;
   width: 50%;
@@ -108,7 +108,7 @@
 
 .taikhoan h1 {
   text-align: center;
-  color: #ffffff;
+  color: #000000;
   font-weight: 300;
   margin: 0 0 40px;
 }
@@ -118,7 +118,7 @@
   -webkit-transform: translateY(6px);
   transform: translateY(6px);
   left: 13px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -149,7 +149,7 @@
 
 .taikhoan label.highlight {
   /* đổi màu label đc dịch lên */
-  color: #ffffff;
+  color: #030303;
 }
 
 .taikhoan input,
@@ -162,7 +162,7 @@
   background: none;
   background-image: none;
   border: 1px solid #a0b3b0;
-  color: #ffffff;
+  color: #000000;
   border-radius: 0;
   transition: border-color .25s ease, box-shadow .25s ease;
 }

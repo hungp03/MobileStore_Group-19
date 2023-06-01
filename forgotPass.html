@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/taikhoan.css">
     <link rel="stylesheet" href="css/footer.css">
 
-
+    <script src="js/dungchung.js"></script>
     <script>
         /* window.onload = function () {
              khoiTao();
@@ -39,6 +39,9 @@
 </head>
 
 <body>
+    <script> addTopNav(); </script>
+	<section style="min-height: 85vh">
+	<script> addHeader(); </script>
     <div class="containTaikhoan" style="transform: scale(1);">
         <div class="taikhoan" style="background-color: #fff;">
             <div class="tab-content-forgot">
@@ -54,8 +57,9 @@
                             <input style="color: #000; margin-top: 35px;" name="auth" type="text" required=""
                                 autocomplete="off" placeholder="Mã xác thực">
                         </div> <!-- /email -->
-
+                        <a  href="index.html">Quay lại trang chủ</a>
                         <button type="submit" class="button button-block">Xác nhận</button>
+                        
                     </form> <!-- /form -->
                 </div> <!-- /log in -->
                 <div id="forgotPass">
@@ -77,9 +81,14 @@
 
         </div> <!-- /taikhoan -->
     </div>
-    <i class="fa fa-arrow-up" id="goto-top-page" onclick="gotoTop()"></i>
+    <footer style="position: absolute; bottom: 0;">
+		<script>
+			addPlc();
+			addFooter();
+		</script>
+    </footer>
 </body>
 <script src="js/forgotpass.js"></script>
-<script src="js/dungchung.js"></script>
+
 
 </html>

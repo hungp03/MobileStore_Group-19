@@ -2,7 +2,6 @@ window.onload = function () {
   khoiTao();
 
   // Thêm banner
-  addBanner("img/banners/banner0.png", "?page=1");
   addBanner("img/banners/banner1.png", "chitietsanpham.html?Poco-X5-5G");
   addBanner("img/banners/banner2.png", "chitietsanpham.html?Samsung-Galaxy-Z-Fold-4");
   addBanner("img/banners/banner3.png", "chitietsanpham.html?Samsung-Galaxy-S23-Ultra");
