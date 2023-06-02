@@ -11,6 +11,8 @@ html {
     background-color: #ffffff;
 }
 
+
+
 hr {
     color: rgb(63, 63, 63);
     background-color: rgb(95, 95, 95);
@@ -74,7 +76,7 @@ header h2 {
 
 .sidebar .nav-link.active,
 .sidebar .nav-link.active i {
-    background-color: #20a8d8;
+    background-color: #1ab188;
     color: #fff;
 }
 

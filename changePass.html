@@ -11,7 +11,7 @@
     <!-- Load font awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         crossorigin="anonymous">
-        
+
     <!-- our files -->
     <!-- css -->
     <link rel="stylesheet" href="css/style.css">
@@ -25,15 +25,17 @@
     <script src="js/forgotpass.js"></script>
     <script src="js/dungchung.js"></script>
     <script>
-        window.onload = function () {
-            khoiTaoForgot();
+        function closeBtn() {
+            showTaiKhoan(false);
+            window.location.replace("index.html");
         }
     </script>
     <style>
-        .tab-content-forgot>div{
+        .tab-content-forgot>div {
             display: none;
         }
-        .tab-content-forgot>div.active{
+
+        .tab-content-forgot>div.active {
             display: block !important;
         }
     </style>
@@ -42,35 +44,36 @@
 
 <body>
     <script> addTopNav(); </script>
-	<section style="min-height: 85vh">
-	<script> addHeader(); </script>
-    <div class="containTaikhoan" style="transform: scale(1);">
-        <div class="taikhoan" style="background-color: #fff;">
-            <div class="tab-content-forgot">
-                <div id="forgotPass" class="active">
-                    <h1 style="color: #000;">Nhập mật khẩu mới</h1>
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+        <div class="containTaikhoan" style="transform: scale(1);">
+            <span class="close" onclick="closeBtn();">&times;</span>
+            <div class="taikhoan" style="background-color: #fff;">
+                <div class="tab-content-forgot">
+                    <div id="forgotPass" class="active">
+                        <h1 style="color: #000;">Nhập mật khẩu mới</h1>
 
-                    <form onsubmit="return passChange(this);">
-                        <div class="field-wrap">
-                            <input style="color: #000;;" name="pass" type="password" required="" autocomplete="off" placeholder="Mật khẩu mới *">
-                        </div> <!-- /pass -->
-                        <a href="index.html">Quay lại trang chủ</a>
-                        <button type="submit" class="button button-block">Đổi mật khẩu</button>
+                        <form onsubmit="return passChange(this);">
+                            <div class="field-wrap">
+                                <input style="color: #000;;" name="pass" type="password" required="" autocomplete="off"
+                                    placeholder="Mật khẩu mới *">
+                            </div> <!-- /pass -->
+                            <button type="submit" class="button button-block">Đổi mật khẩu</button>
 
-                    </form> <!-- /form -->
+                        </form> <!-- /form -->
 
-                </div>
-            </div><!-- tab-content -->
+                    </div>
+                </div><!-- tab-content -->
 
-        </div> <!-- /taikhoan -->
-    </div>
-    <footer style="position: absolute; bottom: 0;">
-		<script>
-			addPlc();
-			addFooter();
-		</script>
-    </footer>
-   
+            </div> <!-- /taikhoan -->
+        </div>
+        <footer style="position: absolute; bottom: 0;">
+            <script>
+                addPlc();
+                addFooter();
+            </script>
+        </footer>
+
 </body>
 
 </html>

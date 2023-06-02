@@ -22,9 +22,10 @@
 
     <script src="js/dungchung.js"></script>
     <script>
-        /* window.onload = function () {
-             khoiTao();
-         }*/
+        function closeBtn() {
+            showTaiKhoan(false);
+            window.location.replace("index.html");
+        }
     </script>
     <style>
         .tab-content-forgot>div {
@@ -40,53 +41,53 @@
 
 <body>
     <script> addTopNav(); </script>
-	<section style="min-height: 85vh">
-	<script> addHeader(); </script>
-    <div class="containTaikhoan" style="transform: scale(1);">
-        <div class="taikhoan" style="background-color: #fff;">
-            <div class="tab-content-forgot">
-                <div id="validateEmail" class="active">
-                    <h1 style="color: #000;">Vui lòng xác nhận email của bạn</h1>
+    <section style="min-height: 85vh">
+        <script> addHeader(); </script>
+        <div class="containTaikhoan" style="transform: scale(1);">
+            <span class="close" onclick="closeBtn() ;">&times;</span>
+            <div class="taikhoan" style="background-color: #fff;">
+                <div class="tab-content-forgot">
+                    <div id="validateEmail" class="active">
+                        <h1 style="color: #000;">Vui lòng xác nhận email của bạn</h1>
 
-                    <form onsubmit="return forgotPass(this);">
+                        <form onsubmit="return forgotPass(this);">
 
-                        <div class="field-wrap">
-                            <input style="color: #000;" name="email" type="email" required="" autocomplete="off"
-                                placeholder="Địa chỉ email">
-                            <label for="auth" class="auth" style="color: #000; left: 0;"></label>
-                            <input style="color: #000; margin-top: 35px;" name="auth" type="text" required=""
-                                autocomplete="off" placeholder="Mã xác thực">
-                        </div> <!-- /email -->
-                        <a  href="index.html">Quay lại trang chủ</a>
-                        <button type="submit" class="button button-block">Xác nhận</button>
-                        
-                    </form> <!-- /form -->
-                </div> <!-- /log in -->
-                <div id="forgotPass">
-                    <h1 style="color: #000;">Nhập mật khẩu mới</h1>
+                            <div class="field-wrap">
+                                <input style="color: #000;" name="email" type="email" required="" autocomplete="off"
+                                    placeholder="Địa chỉ email">
+                                <label for="auth" class="auth" style="color: #000; left: 0;"></label>
+                                <input style="color: #000; margin-top: 35px;" name="auth" type="text" required=""
+                                    autocomplete="off" placeholder="Mã xác thực">
+                            </div> <!-- /email -->
+                            <button type="submit" class="button button-block">Xác nhận</button>
 
-                    <form onsubmit="return passChange(this);">
-                        <div class="field-wrap">
-                            <label style="color:#777">
-                                Mật khẩu mới<span class="req">*</span>
-                            </label>
-                            <input style="color: #000;" name="pass" type="password" required="" autocomplete="off">
-                        </div> <!-- /pass -->
-                        <button type="submit" class="button button-block">Đổi mật khẩu</button>
+                        </form> <!-- /form -->
+                    </div> <!-- /log in -->
+                    <div id="forgotPass">
+                        <h1 style="color: #000;">Nhập mật khẩu mới</h1>
 
-                    </form> <!-- /form -->
+                        <form onsubmit="return passChange(this);">
+                            <div class="field-wrap">
+                                <label style="color:#777">
+                                    Mật khẩu mới<span class="req">*</span>
+                                </label>
+                                <input style="color: #000;" name="pass" type="password" required="" autocomplete="off">
+                            </div> <!-- /pass -->
+                            <button type="submit" class="button button-block">Đổi mật khẩu</button>
 
-                </div>
-            </div><!-- tab-content -->
+                        </form> <!-- /form -->
 
-        </div> <!-- /taikhoan -->
-    </div>
-    <footer style="position: absolute; bottom: 0;">
-		<script>
-			addPlc();
-			addFooter();
-		</script>
-    </footer>
+                    </div>
+                </div><!-- tab-content -->
+
+            </div> <!-- /taikhoan -->
+        </div>
+        <footer style="position: absolute; bottom: 0;">
+            <script>
+                addPlc();
+                addFooter();
+            </script>
+        </footer>
 </body>
 <script src="js/forgotpass.js"></script>
 
