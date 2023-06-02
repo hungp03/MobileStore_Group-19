@@ -1,4 +1,4 @@
-let qty = [0, 50, 26, 44, 18, 0, 24, 15, 9, 38, 3, 32, 6, 37, 3, 19, 39, 12, 24, 35, 4, 39, 15, 13, 35, 27, 21, 37, 0, 25, 45, 46, 6, 23, 13, 2, 40, 37, 47, 44, 32, 35, 1, 45, 18, 5, 14, 26, 40, 1, 5, 19, 49, 39, 24, 8, 30, 10, 47, 13, 48, 36, 33, 18, 29, 15, 16, 38, 42, 18, 44, 5, 16, 43, 48, 13, 42, 50, 23, 33, 35, 2, 38, 47, 13, 3, 28, 21, 35, 20, 14, 14, 48, 3, 45, 43, 6, 22, 36, 0];
+let qty = [0, 50, 26, 44, 18, 0, 24, 15, 9, 38, 3, 32, 6, 37, 3, 19, 39, 12, 24, 35, 4, 39, 15, 13, 35, 27, 21, 37, 0, 25, 45, 46, 6, 23, 13, 2, 40, 37, 47, 44, 32, 35, 1, 45, 18, 5, 14, 26, 40, 1, 5, 19, 49, 39, 24, 8, 30, 10, 47, 13, 48, 36, 33, 18, 29, 15, 16, 38, 42, 18, 44, 5, 16, 43, 48, 13, 42, 50, 23, 33, 35, 2, 38, 47, 13, 3, 28, 21, 35, 20, 14, 14, 48, 3, 45, 43, 6, 22, 36, 0, 7];
 
 let count = -1;
 function getQty(){
@@ -2403,7 +2403,31 @@ let list_products = [
     star: 4.5,
     img: "https://cdn.mobilecity.vn/mobilecity-vn/images/2022/12/w250/xiaomi-redmi-k60-den.jpg.webp",
     qty: getQty(),
-    masp: "spxx",
+    masp: "sp100",
+  },
+  {
+    name: "Asus ROG Phone 6",
+    price: "11.390.000",
+    company: "Asus",
+    rateCount: 0,
+    promo:{
+      name: "giareonline",
+      value: "10.990.000",
+    },
+    detail: {
+      screen: "Amoled 6.78' Full HD+",
+      os: "Android 12, ROG UI",
+      camara: "Chính 50 MP & Phụ 13 MP, 5 MP",
+      camaraFront: "12 MP",
+      cpu: "Snapdragon 8+ gen 1",
+      ram: "12 GB",
+      rom: "256 GB",
+      battery: "6000 mAh, sạc nhanh 65W",
+    },
+    star: 4.3,
+    img: "https://cdn.tgdd.vn/Products/Images/42/268385/asus-rog-phone-6-pro-1-600x600.jpg",
+    qty: getQty(),
+    masp: "sp101",
   },
 ];
 

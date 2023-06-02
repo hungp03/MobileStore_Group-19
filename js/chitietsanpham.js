@@ -91,8 +91,8 @@ function phanTich_URL_chiTietSanPham() {
     var info = document.getElementsByClassName('info')[0];
     var s = addThongSo('Màn hình', sanPhamHienTai.detail.screen);
     s += addThongSo('Hệ điều hành', sanPhamHienTai.detail.os);
-    s += addThongSo('Camara sau', sanPhamHienTai.detail.camara);
-    s += addThongSo('Camara trước', sanPhamHienTai.detail.camaraFront);
+    s += addThongSo('Camera sau', sanPhamHienTai.detail.camara);
+    s += addThongSo('Camera trước', sanPhamHienTai.detail.camaraFront);
     s += addThongSo('CPU', sanPhamHienTai.detail.cpu);
     s += addThongSo('RAM', sanPhamHienTai.detail.ram);
     s += addThongSo('Bộ nhớ trong', sanPhamHienTai.detail.rom); 
@@ -124,7 +124,7 @@ function getDetailPromo(sp) {
         case 'giareonline':
             var del = stringToNum(sp.price) - stringToNum(sp.promo.value);
             var span = `<span style="font-weight: bold">` + numToString(del) + `</span>`;
-            return `Sản phẩm sẽ được giảm ` + span + `₫ khi mua hàng online bằng thẻ thanh toán quốc tế Visa hoặc Momo`;
+            return `Sản phẩm sẽ được giảm ` + span + `₫ khi mua hàng online`;
 
         default:
             var span = `<span style="font-weight: bold">Phiếu giảm giá 100.000đ</span>`;
