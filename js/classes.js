@@ -1,4 +1,4 @@
-function User(username, pass, ho, ten, email, products, donhang, address, phone) {
+function User(username, pass, ho, ten, email, products,cccd, donhang, address, phone) {
 	this.ho = ho || '';
 	this.ten = ten || '';
 	this.email = email || '';
@@ -7,7 +7,7 @@ function User(username, pass, ho, ten, email, products, donhang, address, phone)
 	this.pass = pass;
 	this.products = products || [];
 	this.donhang = donhang || [];
-
+	this.cccd = cccd || '';
   	this.address = address || '';
   	this.phone = phone || '';
  }

@@ -698,7 +698,7 @@ function addContainTaiKhoan() {
 
                 </div> <!-- /log in -->
 
-                <div id="signup"">
+                <div id="signup">
                     <h1>Đăng kí miễn phí</h1>
 
                     <form onsubmit="return signUp(this);">

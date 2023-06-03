@@ -117,6 +117,7 @@ function addInfoUser(user) {
     `" readonly> </td>
             <td> <i class="fa fa-pencil" onclick="changeInfo(this, 'phone')"></i> </td>
         </tr>
+        
         <tr>
             <td colspan="3" style="padding:5px; border-top: 2px solid #ccc;"></td>
         </tr>
@@ -154,7 +155,7 @@ function changePass() {
   }
   if (inps[0].value == inps[1].value) {
     alert("Mật khẩu trùng với mật khẩu cũ");
-   return false;
+    return false;
   }
   if (inps[1] == "") {
     inps[1].focus();
@@ -196,6 +197,13 @@ function changeInfo(iTag, info) {
 
   // Đang hiện
   if (!inp.readOnly && inp.value != "") {
+    /*if (info == "cccd"){
+        if (!checkPhone(inp.value)) {
+            alert("CCCD không hợp lệ!");
+            inp.value = currentUser.cccd;
+            return;
+          }
+    }*/
     if (info == "phone") {
       if (!checkPhone(inp.value)) {
         alert("Số điện thoại không hợp lệ!");
@@ -368,4 +376,21 @@ function addDonHang(dh) {
             <hr>
         `;
   div.innerHTML += s;
+}
+
+function footer(){
+  if (!currentUser){
+    document.write(`<div class="footer" style="position: fixed; bottom: 0;">
+		<script>
+			addFooter();
+		</script>
+	</div>`);
+  }
+  else if (currentUser != null){
+    document.write(`<div class="footer" style="position: relative";>
+		<script>
+			addFooter();
+		</script>
+	</div>`);
+  }
 }
